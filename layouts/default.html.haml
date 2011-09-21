@@ -6,13 +6,47 @@
     %title= "A Brand New nanoc Site - #{@item[:title]}"
     %link(rel="stylesheet" type="text/css" href="/style.css" media="screen")
     %meta(name="generator" content="nanoc 3.2.2")
+
+  %style
+    :plain
+      #menubar .item {
+        _border:          1px solid black;
+        background-color: blue;
+        float:            left;
+        height:           70px;
+        margin:           0 1px;
+        width:            114px;
+      }
+
+      .clear-float {
+        clear: both;
+      }
     
   %body
-    #content(style="margin-left: auto; margin-right: auto; background-color: green; height:200px; width: 800px;")
-      #title(style="float: right;")
-        verticonaut
-      haha
-      .clear(style="float:clear;")
-      #menubar(style="position:absolute; top: 200px; background-color: red; width: 800px;")
-        menubar
+    #content(style="margin-left: auto; margin-right: auto; background-color: _green; width: 700px; height: 850px;")
+      #title(style="float: right; padding-top: 15px;")
+        %span(style="font-size: 24pt;")
+          verticonaut
+      .clear-float
+      #splash(style="position: absolute; top: 50px; bottom: 0; width: 800px; margin-left: auto; margin-right: auto;")
+        %img(src="../img/splash.png" style="position: absolute; left: 100px; right: 200px;")
+      #funbar(style="position: relative; top: 200px; background-color: red; width: 700px;  margin-left: 0; margin-right: auto;")
+        _
+    #menubar(style="margin-left: auto; margin-right: auto; background-color: grey; width: 696px;")
+      .item
+        item 1
+      .item
+        item 2
+      .item
+        climbing
+      .item
+        photography
+      .item
+        projects
+      .item
+        about
+      .clear(style="clear:both;")
+    #footer(style="margin-left: auto; margin-right: auto; background-color: _green; width: 700px;")
+      #footer-content(style ="padding: 10px 0 20px 0; text-align: center;")
+        designed by verticonaut (c) - powered by nanoc
         
