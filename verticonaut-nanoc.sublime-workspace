@@ -3,6 +3,14 @@
 	{
 		"selected_items":
 		[
+			[
+				"co",
+				"color"
+			],
+			[
+				"c",
+				"color"
+			]
 		]
 	},
 	"buffers":
@@ -11,15 +19,15 @@
 			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
 			"settings":
 			{
-				"buffer_size": 681,
+				"buffer_size": 4781,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/index.html.haml",
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/Rules",
 			"settings":
 			{
-				"buffer_size": 958,
+				"buffer_size": 1322,
 				"line_ending": "Unix"
 			}
 		}
@@ -48,10 +56,19 @@
 	},
 	"file_history":
 	[
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/javascript/jtweetsanywhere.js",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/jquery.jtweetsanywhere-1.2.1.css",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/index.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/tmp/checksums",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/stylesheet.css",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/style.css",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/README.txt",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/jquery.jtweetsanywhere-1.2.1.css",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/javascript/jTweetAnywhere/jquery.jtweetsanywhere-1.2.1.js"
 	],
 	"find":
 	{
-		"height": 0
+		"height": 33
 	},
 	"find_in_files":
 	{
@@ -68,6 +85,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"follow",
+			"width: 116px;",
+			"width: 117px;",
+			"width: 118px;",
+			"width: 115px;",
+			"width: 112px;",
+			"width: 110px;",
+			"width: 100px;",
+			"width: 90px;"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -75,6 +101,14 @@
 		"regex": false,
 		"replace_history":
 		[
+			"width: 115px;",
+			"width: 116px;",
+			"width: 117px;",
+			"width: 118px;",
+			"width: 115px;",
+			"width: 112px;",
+			"width: 110px;",
+			"width: 100px;"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -93,15 +127,15 @@
 					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
 					"settings":
 					{
-						"buffer_size": 681,
+						"buffer_size": 4781,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								377,
-								377
+								3291,
+								3291
 							]
 						],
 						"settings":
@@ -111,30 +145,32 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 0,
+						"translation.y": 1595,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/index.html.haml",
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/Rules",
 					"settings":
 					{
-						"buffer_size": 958,
+						"buffer_size": 1322,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								294,
-								294
+								949,
+								949
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
 						"translation.y": 0,
@@ -151,7 +187,7 @@
 	},
 	"input":
 	{
-		"height": 0
+		"height": 30
 	},
 	"layout":
 	{
@@ -178,7 +214,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0
+		"height": 62
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -201,6 +237,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150,
+	"side_bar_width": 184.7109375,
 	"status_bar_visible": true
 }
