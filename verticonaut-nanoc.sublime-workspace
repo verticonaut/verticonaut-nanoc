@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"Th",
+				"Thoughts"
+			],
+			[
 				"co",
 				"color"
 			],
@@ -16,18 +20,10 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/about.html.haml",
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/lib/default.rb",
 			"settings":
 			{
-				"buffer_size": 88,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html.haml",
-			"settings":
-			{
-				"buffer_size": 2391,
+				"buffer_size": 406,
 				"line_ending": "Unix"
 			}
 		},
@@ -35,7 +31,23 @@
 			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
 			"settings":
 			{
-				"buffer_size": 5493,
+				"buffer_size": 5658,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html.haml",
+			"settings":
+			{
+				"buffer_size": 2959,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/about.html.haml",
+			"settings":
+			{
+				"buffer_size": 60,
 				"line_ending": "Unix"
 			}
 		},
@@ -48,26 +60,60 @@
 			}
 		},
 		{
-			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/output/about/index.html",
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/climbing.html",
 			"settings":
 			{
-				"buffer_size": 5996,
+				"buffer_size": 98,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/Rules",
+			"contents": "--- \ntitle:      'verticonaut - Photography\ntopic:      Photography\nbase-color: '#7A9982'\n---\n\nPhotography\n",
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/photography.html",
 			"settings":
 			{
-				"buffer_size": 1383,
+				"buffer_size": 107,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/output/detail/about/index.html",
+			"contents": "--- \ntitle:      'verticonaut - Projects'\ntopic:      Projects\nbase-color: '#665C47'\n---\n\nProjects\n",
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/projects.html",
 			"settings":
 			{
-				"buffer_size": 3030,
+				"buffer_size": 99,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/thoughts.html",
+			"settings":
+			{
+				"buffer_size": 99,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/thoughts.html.haml",
+			"settings":
+			{
+				"buffer_size": 62,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/photography.html.haml",
+			"settings":
+			{
+				"buffer_size": 68,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/climbing.html.haml",
+			"settings":
+			{
+				"buffer_size": 62,
 				"line_ending": "Unix"
 			}
 		},
@@ -80,19 +126,18 @@
 			}
 		},
 		{
-			"contents": "# All files in the 'lib' directory will be loaded\n# before nanoc starts compiling.\n\ndef base_color(detail_topic)\n\nend",
-			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/lib/default.rb",
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/projects.html.haml",
 			"settings":
 			{
-				"buffer_size": 117,
+				"buffer_size": 62,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/martin/Library/Application Support/Sublime Text 2/Packages/Default/Base File.sublime-settings",
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/stylesheet.css",
 			"settings":
 			{
-				"buffer_size": 6119,
+				"buffer_size": 1061,
 				"line_ending": "Unix"
 			}
 		}
@@ -121,17 +166,21 @@
 	},
 	"file_history":
 	[
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/index.html",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default_orig.html",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/about/index.html",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/about/climbing.html",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/about.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/index.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/about/index.html",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/Rules",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/detail/about/index.html",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default_orig.html",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/lib/default.rb",
+		"/Users/martin/Library/Application Support/Sublime Text 2/Packages/Default/Base File.sublime-settings",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/index.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/README",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/about.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/Rules",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/about.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/about.html",
 		"/Users/martin/Library/Application Support/Sublime Text 2/Packages/Default/Global.sublime-settings",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/config.yaml",
@@ -198,23 +247,105 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/about.html.haml",
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/lib/default.rb",
 					"settings":
 					{
-						"buffer_size": 88,
+						"buffer_size": 406,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								36,
-								36
+								406,
+								406
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
+					"settings":
+					{
+						"buffer_size": 5658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4505,
+								5146
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 2089,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html.haml",
+					"settings":
+					{
+						"buffer_size": 2959,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								648,
+								648
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/about.html.haml",
+					"settings":
+					{
+						"buffer_size": 60,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23,
+								23
 							]
 						],
 						"settings":
@@ -228,63 +359,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html.haml",
-					"settings":
-					{
-						"buffer_size": 2391,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1177,
-								1177
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 468,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
-					"settings":
-					{
-						"buffer_size": 5493,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4961,
-								4961
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 1987,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/index.html.haml",
 					"settings":
 					{
@@ -310,82 +385,50 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/output/about/index.html",
-					"settings":
-					{
-						"buffer_size": 5996,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 1081,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 5,
-					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/Rules",
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/climbing.html",
 					"settings":
 					{
-						"buffer_size": 1383,
+						"buffer_size": 98,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								760,
-								760
+								98,
+								98
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0,
-						"translation.y": 134,
+						"translation.y": 0,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/output/detail/about/index.html",
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/photography.html",
 					"settings":
 					{
-						"buffer_size": 3030,
+						"buffer_size": 107,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								107,
+								107
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0,
 						"translation.y": 0,
@@ -395,6 +438,136 @@
 				},
 				{
 					"buffer": 7,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/projects.html",
+					"settings":
+					{
+						"buffer_size": 99,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								99,
+								99
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/thoughts.html",
+					"settings":
+					{
+						"buffer_size": 99,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								99,
+								99
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/thoughts.html.haml",
+					"settings":
+					{
+						"buffer_size": 62,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/photography.html.haml",
+					"settings":
+					{
+						"buffer_size": 68,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/climbing.html.haml",
+					"settings":
+					{
+						"buffer_size": 62,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
 					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default_orig.html",
 					"settings":
 					{
@@ -422,24 +595,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/lib/default.rb",
+					"buffer": 13,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/projects.html.haml",
 					"settings":
 					{
-						"buffer_size": 117,
+						"buffer_size": 62,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								113,
-								113
+								26,
+								26
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
 						},
 						"translation.x": 0,
 						"translation.y": 0,
@@ -448,28 +621,29 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "/Users/martin/Library/Application Support/Sublime Text 2/Packages/Default/Base File.sublime-settings",
+					"buffer": 14,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/stylesheet.css",
 					"settings":
 					{
-						"buffer_size": 6119,
+						"buffer_size": 1061,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1411,
-								1411
+								180,
+								180
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 320,
+						"translation.y": 0,
 						"zoom_level": 1
 					},
 					"type": "text"
