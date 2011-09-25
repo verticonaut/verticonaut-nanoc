@@ -1,0 +1,106 @@
+!!!
+%html
+
+  %head
+    %meta(charset="utf-8")
+    %title= "verticonaut - #{@item[:title]}"
+    %link(rel="stylesheet" type="text/css" href="/assets/styles/stylesheet.css" media="screen")
+    %link(rel="stylesheet" type="text/css" href="/assets/styles/jquery.jtweetsanywhere-1.2.1.css" media="screen")
+    %meta(name="generator" content="nanoc 3.2.2")
+
+  %style
+    :plain
+      .clear-float {
+        clear: both;
+      }
+
+      #menubar .item {
+        _border:          1px solid black;
+        _background-color: blue;
+        float:            left;
+        height:           25px;
+        margin:           0 1px;
+        width:            188px;
+        text-align:       center;
+      }
+
+      #menubar .first {
+        margin-left: 5px;
+      }
+
+      .clear-float {
+        clear: both;
+      }
+
+      #menu-item-color-1 {
+        background: #BFBF99;
+      }
+      #menu-item-color-2 {
+        background: #7A9982;
+      }
+      #menu-item-color-3 {
+        background: #665C47;
+      }
+      #menu-item-color-4 {
+        background: #7F0026;
+      }
+      #menu-item-color-5 {
+        background: #E5B867;
+      }
+
+
+      #header {
+        font-size:  24pt;
+        padding:    20px 0 10px 15px;
+      }
+
+
+  %script(type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js")
+  %script(type="text/javascript" src="assets/javascript/jtweetsanywhere.js")
+  %script(type="text/javascript")
+    :plain
+      $(document).ready(function(){
+
+      });
+    
+
+
+  %body
+    #content(style="margin-left: auto; margin-right: auto; width: 960px; height: 850px;")
+      #header{:style => "background: #{@item[:'base-color']};"}
+        #{@item[:title]}
+        #title(style="float: right; width: 250px; padding-top: 10px; font-size: 16pt; text-align: right; padding-right: 10px;")
+          %a(href="/")
+            verticonaut
+        .clear-float
+
+      = yield
+
+    #menubar(style="margin-left: auto; margin-right: auto; width: 960px;")
+      %a(href="/detail/climbing")
+        #menu-item-color-1.item.first
+          %p(style="margin-top: 3px;")
+            Climbing
+      %a(href="/detail/photography")
+        #menu-item-color-2.item
+          %p(style="margin-top: 3px;")
+            Photography
+      %a(href="/detail/projects")
+        #menu-item-color-3.item
+          %p(style="margin-top: 3px;")
+            Projects
+      %a(href="/detail/thoughts")
+        #menu-item-color-4.item
+          %p(style="margin-top: 3px;")
+            Thoughts
+      %a(href="/detail/about")
+        #menu-item-color-5.item
+          %p(style="margin-top: 3px;")
+            About
+      .clear(style="clear:both;")
+
+    #footer(style="margin-left: auto; margin-right: auto; background-color: _green; width: 700px;")
+      #footer-content(style ="padding: 10px 0 20px 0; text-align: center; font-size: 9pt;")
+        Design and Copyright © 2011 Martin Schweizer - Built with
+        %a(href="http://nanoc.stoneship.org/" target="_blank") Nanoc
+

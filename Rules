@@ -18,6 +18,12 @@
 compile %r{^/assets/(javascript|styles)/} do
 end
 
+compile 'detail/*' do
+  filter :haml
+  layout 'detail'
+end
+
+
 compile '*' do
   if item.binary?
     # don’t filter binary items

@@ -3,7 +3,7 @@
 
   %head
     %meta(charset="utf-8")
-    %title= "A Brand New nanoc Site - #{@item[:title]}"
+    %title= "verticonaut - #{@item[:title]}"
     %link(rel="stylesheet" type="text/css" href="/assets/styles/stylesheet.css" media="screen")
     %link(rel="stylesheet" type="text/css" href="/assets/styles/jquery.jtweetsanywhere-1.2.1.css" media="screen")
     %meta(name="generator" content="nanoc 3.2.2")
@@ -12,15 +12,36 @@
     :plain
       #menubar .item {
         _border:          1px solid black;
-        background-color: blue;
+        _background-color: blue;
         float:            left;
         height:           70px;
         margin:           0 1px;
-        width:            114px;
+        width:            134px;
+        text-align:       center;
+      }
+
+      #menubar .first {
+        margin-left: 8px;
       }
 
       .clear-float {
         clear: both;
+      }
+
+      #menu-item-color-1 {
+        background: #BFBF99;
+      }
+      #menu-item-color-2 {
+        background: #7A9982;
+      }
+      #menu-item-color-3 {
+        background: #665C47;
+      }
+      #menu-item-color-4 {
+        background: #7F0026;
+      }
+      #menu-item-color-5 {
+        background: #E5B867;
       }
 
       #slide-panel {
@@ -113,20 +134,29 @@
       / #funbar(style="position: relative; top: 200px; background-color: red; width: 700px;  margin-left: 0; margin-right: auto;")
       /   _
 
-    #menubar(style="margin-left: auto; margin-right: auto; background-color: grey; width: 696px;")
-      .item
-        item 1
-      .item
-        item 2
-      .item
-        climbing
-      .item
-        photography
-      .item
-        projects
-      .item
-        about
+    #menubar(style="margin-left: auto; margin-right: auto; _background-color: grey; width: 696px;")
+      %a(href="/detail/climbing")
+        #menu-item-color-1.item.first
+          %p(style="margin-top: 25px;")
+            Climbing
+      %a(href="/detail/photography")
+        #menu-item-color-2.item
+          %p(style="margin-top: 25px;")
+            Photography
+      %a(href="/detail/projects")
+        #menu-item-color-3.item
+          %p(style="margin-top: 25px;")
+            Projects
+      %a(href="/detail/thoughts")
+        #menu-item-color-4.item
+          %p(style="margin-top: 25px;")
+            Thoughts
+      %a(href="/detail/about")
+        #menu-item-color-5.item
+          %p(style="margin-top: 25px;")
+            About
       .clear(style="clear:both;")
+
     #footer(style="margin-left: auto; margin-right: auto; background-color: _green; width: 700px;")
       #footer-content(style ="padding: 10px 0 20px 0; text-align: center; font-size: 9pt;")
         Design and Copyright © 2011 Martin Schweizer - Built with

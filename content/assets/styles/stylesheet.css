@@ -11,15 +11,16 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 a:link,
 a:visited {
-  color: #f30;
+  _color: #f30;
 }
 
 a:hover {
-  color: #f90;
+  _color: #f90;
 }
 
 #main {
