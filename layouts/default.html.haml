@@ -14,52 +14,76 @@
         _border:          1px solid black;
         _background-color: blue;
         float:            left;
-        height:           70px;
+        height:           45px;
         margin:           0 1px;
         width:            134px;
         text-align:       center;
+        padding-top:      25px;
       }
 
       #menubar .first {
         margin-left: 8px;
       }
 
-      .clear-float {
+      .clear-floats {
         clear: both;
       }
 
-      #menu-item-color-1 {
+      .filler {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .menu-item-color-1 {
         background: #e0ddab;
       }
-      #menu-item-color-1:hover {
+      .menu-item-color-1:hover {
+        background: #BFBF99;
+      }
+      .menu-item-color-1-hover {
         background: #BFBF99;
       }
 
-      #menu-item-color-2 {
+      .menu-item-color-2 {
         background: #94b394;
       }
-      #menu-item-color-2:hover {
+      .menu-item-color-2:hover {
+        background: #7A9982;
+      }
+      .menu-item-color-2-hover {
         background: #7A9982;
       }
 
-      #menu-item-color-3 {
+      .menu-item-color-3 {
         background: #978765;
       }
-      #menu-item-color-3:hover {
+      .menu-item-color-3:hover {
+        background: #665C47;
+      }
+      .menu-item-color-3-hover {
         background: #665C47;
       }
 
-      #menu-item-color-4 {
+      .menu-item-color-4 {
         background: #a21e36;
       }
-      #menu-item-color-4:hover {
+      .menu-item-color-4:hover {
+        background: #7F0026;
+      }
+      .menu-item-color-4-hover {
         background: #7F0026;
       }
 
-      #menu-item-color-5 {
+      .menu-item-color-5 {
         background: #f3d49d;
       }
-      #menu-item-color-5:hover {
+      .menu-item-color-5:hover {
+        background: #E5B867;
+      }
+      .menu-item-color-5-hover {
         background: #E5B867;
       }
 
@@ -128,7 +152,22 @@
         });
 
         // vibrate stuff
-        $('.focus').mouseenter(function() {
+        $('#splash .focus').mouseenter(function() {
+          // ele is area to shiver
+          var id = $(this).attr("data-shiver-id");
+          var ele = $(id);
+          ele.attr('data-mouse', 'shiver');
+          ele.show();
+          
+          // set menu item color
+          var menu_ref = ele.attr('data-menu-item');
+          $('.'+menu_ref).addClass(menu_ref + '-hover');
+
+          // start shiver ele
+          ele.vibrate({spread: 7, frequency: 1000, duration: 1000, speed: 50});
+        });
+
+        $('#menubar .focus').mouseenter(function() {
           var id = $(this).attr("data-shiver-id");
           var ele = $(id);
           ele.show();
@@ -136,71 +175,88 @@
         });
 
         $('.shiver').mouseout(function() {
-          $(this).hide(); 
+          var menu_ref = $(this).attr('data-menu-item');
+          $('.'+menu_ref).removeClass(menu_ref + '-hover').addClass(menu_ref);
+
+          if ($(this).attr('data-mouse')) {
+            $(this).hide(); 
+          }
+        });
+
+        $('#menubar .focus').mouseout(function() {
+          var id = $(this).attr("data-shiver-id");
+          $(id).hide();
         });
       });
     
 
 
   %body
-    #content(style="margin-left: auto; margin-right: auto; background-color: _green; width: 700px; height: 850px;")
-      #title(style="float: right; width: 250px; padding-top: 15px; border-bottom: 2px solid silver; font-size: 24pt; text-align: right; z-index: 3;")
-        verticonaut
-      .clear-float
-      #socials(style="float: right; padding-top: 2px; z-index: 3;")
-        %div(style="float: right;")
-          %a(href="http://www.facebook.com" target="_blank")
-            %img(src="assets/img/facebook_32.png")
-        %div(style="float: right; z-index: 5;")
-          %a(href="http://www.xing.com/profile/Martin_Schweizer10?sc_o=mxb_p" target="_blank")
-            %img(src="assets/img/xing_32.png")
-        %div(style="float: right; z-index: 5;")
-          %a(href="https://github.com/verticonaut" target="_blank")
-            %img(src="assets/img/github_32.png")
-        %div(style="float: right; z-index: 5;")
-          %a(href="http://twitter.com/#!/verticonaut" target="_blank")
-            %img(src="assets/img/twitter_32.png" style="z-index: 5;")
+    #content(style="margin-left: auto; margin-right: auto; width: 700px; height: 850px;")
+      #title(style="float: right; width: 250px; padding-top: 15px; z-index: 99;")
+        #title-text(style="float: right; _position: absolute; top: 0; right: 0; width: 250px; border-bottom: 2px solid silver; font-size: 24pt; text-align: right;")
+          verticonaut
+        #socials(style="float: right; padding-top: 2px;")
+          %div(style="float: right;" title="Facebook")
+            %a(href="http://www.facebook.com" target="_blank")
+              %img(src="assets/img/facebook_32.png")
+          %div(style="float: right;" title="Facebook")
+            %a(href="http://www.xing.com/profile/Martin_Schweizer10?sc_o=mxb_p" target="_blank")
+              %img(src="assets/img/xing_32.png")
+          %div(style="float: right;" title="LinkedIn")
+            %a(href="http://www.linkedin.com/pub/martin-schweizer/33/719/109" target="_blank")
+              %img(src="assets/img/linkedin_32.png")
+          %div(style="float: right;" title="Github")
+            %a(href="https://github.com/verticonaut" target="_blank")
+              %img(src="assets/img/github_32.png")
+          %div(style="float: right;" title="Twitter")
+            %a(href="http://twitter.com/#!/verticonaut" target="_blank")
+              %img(src="assets/img/twitter_32.png")
+      .clear-floats
         
-      #splash(style="position: absolute; top: 45px; bottom: 0; width: 800px; margin-left: auto; margin-right: auto; z-index: 0;")
-        %img(src="assets/img/splash.png" style="position: relative; left: 70px; right: 200px; z-index: -1;")
+      #splash(style="position: absolute; top: 45px; bottom: 0; width: 800px; margin-left: auto; margin-right: auto; z-index: 1;")
+        %img(src="assets/img/splash.png" style="position: relative; left: 70px; right: 200px; z-index: 1;")
 
         .focus(style="width: 20px; height: 20px; border: 1px solid red; position: absolute; top: 650px; left: 250px; z-index: 10;" data-shiver-id="#shiver-climbing")
-        #shiver-climbing.shiver(style="width: 160px; height: 80px; border: 1px solid black; position: absolute; top: 630px; left: 180px; display: none; z-index: 9;")
+        #shiver-climbing.shiver(style="width: 160px; height: 80px; border: 1px solid black; position: absolute; top: 630px; left: 180px; display: none; z-index: 9;" data-menu-item="menu-item-color-1")
+          %a(href="/detail/climbing")
+            .filler
 
         .focus(style="width: 20px; height: 20px; border: 1px solid red; position: absolute; top: 550px; left: 502px; z-index: 10;" data-shiver-id="#shiver-photography")
-        #shiver-photography.shiver(style="width: 60px; height: 100px; border: 1px solid black; position: absolute; top: 520px; left: 482px; display: none; z-index: 9;")
+        #shiver-photography.shiver(style="width: 60px; height: 100px; border: 1px solid black; position: absolute; top: 520px; left: 482px; display: none; z-index: 9;" data-menu-item="menu-item-color-2")
+          %a(href="/detail/photography")
+            .filler
 
         .focus(style="width: 20px; height: 20px; border: 1px solid red; position: absolute; top: 378px; left: 410px; z-index: 10;" data-shiver-id="#shiver-projects")
-        #shiver-projects.shiver(style="width: 70px; height: 100px; border: 1px solid black; position: absolute; top: 340px; left: 380px; display: none; z-index: 9;")
+        #shiver-projects.shiver(style="width: 70px; height: 100px; border: 1px solid black; position: absolute; top: 340px; left: 380px; display: none; z-index: 9;" data-menu-item="menu-item-color-3")
+          %a(href="/detail/thoughts")
+            .filler
 
         .focus(style="width: 20px; height: 20px; border: 1px solid red; position: absolute; top: 60px; left: 280px; z-index: 10;" data-shiver-id="#shiver-thoughts")
-        #shiver-thoughts.shiver(style="width: 60px; height: 60px; border: 1px solid black; position: absolute; top: 40px; left: 260px; display: none; z-index: 9;")
+        #shiver-thoughts.shiver(style="width: 60px; height: 60px; border: 1px solid black; position: absolute; top: 40px; left: 260px; display: none; z-index: 9;" data-menu-item="menu-item-color-4")
+          %a(href="/detail/about")
+            .filler
 
       / #funbar(style="position: relative; top: 200px; background-color: red; width: 700px;  margin-left: 0; margin-right: auto;")
       /   _
 
     #menubar(style="margin-left: auto; margin-right: auto; _background-color: grey; width: 696px;")
       %a(href="/detail/climbing")
-        #menu-item-color-1.item.first.focus(data-shiver-id="#shiver-climbing")
-          %p(style="margin-top: 25px;")
-            Climbing
+        .menu-item-color-1.item.first.focus(data-shiver-id="#shiver-climbing")
+          Climbing
       %a(href="/detail/photography")
-        #menu-item-color-2.item.focus(data-shiver-id="#shiver-photography")
-          %p(style="margin-top: 25px;")
-            Photography
+        .menu-item-color-2.item.focus(data-shiver-id="#shiver-photography")
+          Photography
       %a(href="/detail/projects")
-        #menu-item-color-3.item.focus(data-shiver-id="#shiver-projects")
-          %p(style="margin-top: 25px;")
-            Projects
+        .menu-item-color-3.item.focus(data-shiver-id="#shiver-projects")
+          Projects
       %a(href="/detail/thoughts")
-        #menu-item-color-4.item.focus(data-shiver-id="#shiver-thoughts")
-          %p(style="margin-top: 25px;")
-            Thoughts
+        .menu-item-color-4.item.focus(data-shiver-id="#shiver-thoughts")
+          Thoughts
       %a(href="/detail/about")
-        #menu-item-color-5.item.focus(data-shiver-id="#shiver-about")
-          %p(style="margin-top: 25px;")
-            About
-      .clear(style="clear:both;")
+        .menu-item-color-5.item.focus(data-shiver-id="#shiver-about")
+          About
+      .clear-floats
 
     #footer(style="margin-left: auto; margin-right: auto; background-color: _green; width: 700px;")
       #footer-content(style ="padding: 10px 0 20px 0; text-align: center; font-size: 9pt;")
@@ -209,6 +265,12 @@
 
 
     #slide-panel
+      %div(style="position: absolute; left: 15px; top: 15px;" title="Twitter")
+        %a(href="http://twitter.com/#!/verticonaut" target="_blank")
+          %img(src="assets/img/twitter_32.png")
+      %div(style="position: absolute; left: 55px; top: 21px;")
+        Twitter
+
       #latest-tweets(style="font-family: Helvetica, Arial, sans-serif; font-size: 10pt;")
     %a#slide-trigger(href="#")
       News
