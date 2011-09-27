@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"clear",
+				"clear"
+			],
+			[
 				"Th",
 				"Thoughts"
 			],
@@ -19,6 +23,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
+			"settings":
+			{
+				"buffer_size": 10559,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html.haml",
+			"settings":
+			{
+				"buffer_size": 3316,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/stylesheet.css",
+			"settings":
+			{
+				"buffer_size": 1069,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -44,32 +72,38 @@
 	},
 	"file_history":
 	[
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/javascript/jquery.vibrate.js",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/heartbeat.html.haml",
+		"/Users/martin/Library/Application Support/Sublime Text 2/Packages/Default/Global.sublime-settings",
+		"/Users/martin/Library/Application Support/Sublime Text 2/Packages/Default/Base File.sublime-settings",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/heartbeat.html.haml.html",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/heartbeat.html.haml.htm",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/heartbeat.html",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/assets/javascript/jquery.vibrate.js",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/climbing.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/photography.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/projects.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/about.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/thoughts.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/lib/default.rb",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/about.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/index.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/climbing.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/photography.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/projects.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/thoughts.html",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/thoughts.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/photography.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/climbing.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default_orig.html",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/projects.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/stylesheet.css",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/about/climbing.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/about/index.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/Rules",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/detail/about/index.html",
-		"/Users/martin/Library/Application Support/Sublime Text 2/Packages/Default/Base File.sublime-settings",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/index.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/README",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/about.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/about.html",
-		"/Users/martin/Library/Application Support/Sublime Text 2/Packages/Default/Global.sublime-settings",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/config.yaml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/about.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/javascript/jtweetsanywhere.js",
@@ -100,6 +134,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"menu-item-color",
+			"clear-float",
 			"follow",
 			"width: 116px;",
 			"width: 117px;",
@@ -134,8 +170,93 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
+					"settings":
+					{
+						"buffer_size": 10559,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10031,
+								10031
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 4384,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html.haml",
+					"settings":
+					{
+						"buffer_size": 3316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3233,
+								3199
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 1341,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/stylesheet.css",
+					"settings":
+					{
+						"buffer_size": 1069,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								192,
+								192
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -191,10 +312,10 @@
 		],
 		"width": 0
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 184.7109375,
+	"side_bar_width": 216.17578125,
 	"status_bar_visible": true
 }

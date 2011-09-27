@@ -9,7 +9,7 @@ body {
   background: #fff;
 }
 
-a {
+.nolink a {
   text-decoration: none;
   color: black;
 }

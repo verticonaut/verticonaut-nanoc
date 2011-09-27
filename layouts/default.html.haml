@@ -25,6 +25,10 @@
         margin-left: 8px;
       }
 
+      #menubar a {
+        text-decoration: none;
+        color: black;
+      }
       .clear-floats {
         clear: both;
       }
@@ -85,6 +89,18 @@
       }
       .menu-item-color-5-hover {
         background: #E5B867;
+      }
+
+      #heartbeat {
+        _border: 1px solid red;
+        height: 16px;
+        position: absolute; 
+        width: 16px;
+        z-index: 10;
+      }
+      #heartbeat:hover {
+        background-image:  url(assets/img/heart_16.png);
+        background-repeat: no-repeat;
       }
 
       #slide-panel {
@@ -193,7 +209,7 @@
 
   %body
     #content(style="margin-left: auto; margin-right: auto; width: 700px; height: 850px;")
-      #title(style="float: right; width: 250px; padding-top: 15px; z-index: 99;")
+      #title.nolink(style="float: right; width: 250px; padding-top: 15px; z-index: 99;")
         #title-text(style="float: right; _position: absolute; top: 0; right: 0; width: 250px; border-bottom: 2px solid silver; font-size: 24pt; text-align: right;")
           verticonaut
         #socials(style="float: right; padding-top: 2px;")
@@ -237,10 +253,14 @@
           %a(href="/detail/about")
             .filler
 
+        #heartbeat(style="top: 160px; left: 320px;")
+          %a(href="/detail/heartbeat")
+            .filler
+
       / #funbar(style="position: relative; top: 200px; background-color: red; width: 700px;  margin-left: 0; margin-right: auto;")
       /   _
 
-    #menubar(style="margin-left: auto; margin-right: auto; _background-color: grey; width: 696px;")
+    #menubar.nolink(style="margin-left: auto; margin-right: auto; _background-color: grey; width: 696px;")
       %a(href="/detail/climbing")
         .menu-item-color-1.item.first.focus(data-shiver-id="#shiver-climbing")
           Climbing
@@ -260,8 +280,8 @@
 
     #footer(style="margin-left: auto; margin-right: auto; background-color: _green; width: 700px;")
       #footer-content(style ="padding: 10px 0 20px 0; text-align: center; font-size: 9pt;")
-        Design and Copyright © 2011 Martin Schweizer - Built with
-        %a(href="http://nanoc.stoneship.org/" target="_blank") Nanoc
+        Design by Martin Schweizer - 2011  - Built with
+        %a(href="http://nanoc.stoneship.org/" target="_blank" style="color: red") Nanoc
 
 
     #slide-panel
