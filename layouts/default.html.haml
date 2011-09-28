@@ -103,6 +103,10 @@
         background-repeat: no-repeat;
       }
 
+      #socials div {
+        padding: 2px;
+      }
+
       #slide-panel {
         -moz-border-radius-bottomleft: 10px;
         -moz-border-radius-topleft: 10px;
@@ -212,26 +216,29 @@
       #title.nolink(style="float: right; width: 250px; padding-top: 15px; z-index: 99;")
         #title-text(style="float: right; _position: absolute; top: 0; right: 0; width: 250px; border-bottom: 2px solid silver; font-size: 24pt; text-align: right;")
           verticonaut
-        #socials(style="float: right; padding-top: 2px;")
+        #socials(style="float: right; padding-top: 2px; z-index: 99;")
           %div(style="float: right;" title="Facebook")
             %a(href="http://www.facebook.com" target="_blank")
-              %img(src="assets/img/facebook_32.png")
-          %div(style="float: right;" title="Facebook")
+              %img(src="assets/img/24px/facebook.png")
+          %div(style="float: right;" title="Xing")
             %a(href="http://www.xing.com/profile/Martin_Schweizer10?sc_o=mxb_p" target="_blank")
-              %img(src="assets/img/xing_32.png")
+              %img(src="assets/img/24px/xing.png")
           %div(style="float: right;" title="LinkedIn")
             %a(href="http://www.linkedin.com/pub/martin-schweizer/33/719/109" target="_blank")
-              %img(src="assets/img/linkedin_32.png")
+              %img(src="assets/img/24px/linkedin.png")
+          %div(style="float: right;" title="Vimeo")
+            %a(href="http://vimeo.com/verticonaut" target="_blank")
+              %img(src="assets/img/24px/vimeo.png")
           %div(style="float: right;" title="Github")
             %a(href="https://github.com/verticonaut" target="_blank")
-              %img(src="assets/img/github_32.png")
+              %img(src="assets/img/24px/github.png" style="padding-top: 1px;")
           %div(style="float: right;" title="Twitter")
             %a(href="http://twitter.com/#!/verticonaut" target="_blank")
-              %img(src="assets/img/twitter_32.png")
+              %img(src="assets/img/24px/twitter.png")
       .clear-floats
         
-      #splash(style="position: absolute; top: 45px; bottom: 0; width: 800px; margin-left: auto; margin-right: auto; z-index: 1;")
-        %img(src="assets/img/splash.png" style="position: relative; left: 70px; right: 200px; z-index: 1;")
+      #splash(style="position: absolute; top: 45px; bottom: 0; width: 800px; margin-left: auto; margin-right: auto; z-index: -1;")
+        %img(src="assets/img/splash.png" style="position: relative; left: 70px; right: 200px; z-index: 0;")
 
         .focus(style="width: 20px; height: 20px; border: 1px solid red; position: absolute; top: 650px; left: 250px; z-index: 10;" data-shiver-id="#shiver-climbing")
         #shiver-climbing.shiver(style="width: 160px; height: 80px; border: 1px solid black; position: absolute; top: 630px; left: 180px; display: none; z-index: 9;" data-menu-item="menu-item-color-1")
@@ -287,7 +294,7 @@
     #slide-panel
       %div(style="position: absolute; left: 15px; top: 15px;" title="Twitter")
         %a(href="http://twitter.com/#!/verticonaut" target="_blank")
-          %img(src="assets/img/twitter_32.png")
+          %img(src="assets/img/32px/twitter.png")
       %div(style="position: absolute; left: 55px; top: 21px;")
         Twitter
 

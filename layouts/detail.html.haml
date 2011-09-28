@@ -73,9 +73,17 @@
         padding:    20px 0 10px 15px;
       }
 
+      .content {
+        _font-family: 'PT Serif, Georgia, Times';
+        font-family: Arial, sans-serif;
+        font-size: 16pt;
+        background-image: url('/assets/img/background.png');
+        background-color: #F8F8F8;
+        height: 100%;
+      }
+
 
   %script(type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js")
-  %script(type="text/javascript" src="assets/javascript/jtweetsanywhere.js")
   %script(type="text/javascript")
     :plain
       $(document).ready(function(){
@@ -93,7 +101,8 @@
             verticonaut
         .clear-float
 
-      = yield
+      .content.padder
+        = yield
 
     #menubar.nolink(style="margin-left: auto; margin-right: auto; width: 960px;")
       %a(href="/detail/climbing")
