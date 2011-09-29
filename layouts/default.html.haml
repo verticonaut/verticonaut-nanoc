@@ -4,211 +4,72 @@
   %head
     %meta(charset="utf-8")
     %title= "verticonaut - #{@item[:title]}"
-    %link(rel="stylesheet" type="text/css" href="/assets/styles/stylesheet.css" media="screen")
-    %link(rel="stylesheet" type="text/css" href="/assets/styles/jquery.jtweetsanywhere-1.2.1.css" media="screen")
+    %link(rel="stylesheet" type="text/css" href="/assets/styles/default.css" media="screen")
+    %link(rel="stylesheet" type="text/css" href="/assets/styles/jquery.jtweetsanywhere-1_2_1.css" media="screen")
     %meta(name="generator" content="nanoc 3.2.2")
 
-  %style
-    :plain
-      #menubar .item {
-        _border:          1px solid black;
-        _background-color: blue;
-        float:            left;
-        height:           45px;
-        margin:           0 1px;
-        width:            134px;
-        text-align:       center;
-        padding-top:      25px;
-      }
+    %script(type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js")
+    %script(type="text/javascript" src="assets/javascript/jtweetsanywhere.js")
+    %script(type="text/javascript" src="assets/javascript/jquery.vibrate.js")
+    %script(type="text/javascript")
+      :plain
+        $(document).ready(function(){
 
-      #menubar .first {
-        margin-left: 8px;
-      }
+          // twitter news slide panel
+          $("#slide-trigger").click(function(){
+              $("#slide-panel").toggle("fast");
 
-      #menubar a {
-        text-decoration: none;
-        color: black;
-      }
-      .clear-floats {
-        clear: both;
-      }
+              return false;
+          });
 
-      .filler {
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
+          $("#_slide-panel").mouseout(function() {
+            $(this).toggle("fast");
+          });
 
-      .menu-item-color-1 {
-        background: #e0ddab;
-      }
-      .menu-item-color-1:hover {
-        background: #BFBF99;
-      }
-      .menu-item-color-1-hover {
-        background: #BFBF99;
-      }
+          $('#latest-tweets').jTweetsAnywhere({
+            username: 'verticonaut',
+            count: 5,
+            showFollowButton: true
+          });
 
-      .menu-item-color-2 {
-        background: #94b394;
-      }
-      .menu-item-color-2:hover {
-        background: #7A9982;
-      }
-      .menu-item-color-2-hover {
-        background: #7A9982;
-      }
+          // vibrate stuff
+          $('#splash .focus').mouseenter(function() {
+            // ele is area to shiver
+            var id = $(this).attr("data-shiver-id");
+            var ele = $(id);
+            ele.attr('data-mouse', 'shiver');
+            ele.show();
+            
+            // set menu item color
+            var menu_ref = ele.attr('data-menu-item');
+            $('.'+menu_ref).addClass(menu_ref + '-hover');
 
-      .menu-item-color-3 {
-        background: #978765;
-      }
-      .menu-item-color-3:hover {
-        background: #665C47;
-      }
-      .menu-item-color-3-hover {
-        background: #665C47;
-      }
+            // start shiver ele
+            ele.vibrate({spread: 7, frequency: 1000, duration: 1000, speed: 50});
+          });
 
-      .menu-item-color-4 {
-        background: #a21e36;
-      }
-      .menu-item-color-4:hover {
-        background: #7F0026;
-      }
-      .menu-item-color-4-hover {
-        background: #7F0026;
-      }
+          $('#menubar .focus').mouseenter(function() {
+            var id = $(this).attr("data-shiver-id");
+            var ele = $(id);
+            ele.show();
+            ele.vibrate({spread: 7, frequency: 1000, duration: 1000, speed: 50});
+          });
 
-      .menu-item-color-5 {
-        background: #f3d49d;
-      }
-      .menu-item-color-5:hover {
-        background: #E5B867;
-      }
-      .menu-item-color-5-hover {
-        background: #E5B867;
-      }
+          $('.shiver').mouseout(function() {
+            var menu_ref = $(this).attr('data-menu-item');
+            $('.'+menu_ref).removeClass(menu_ref + '-hover').addClass(menu_ref);
 
-      #heartbeat {
-        _border: 1px solid red;
-        height: 16px;
-        position: absolute; 
-        width: 16px;
-        z-index: 10;
-      }
-      #heartbeat:hover {
-        background-image:  url(assets/img/heart_16.png);
-        background-repeat: no-repeat;
-      }
+            if ($(this).attr('data-mouse')) {
+              $(this).hide(); 
+            }
+          });
 
-      #socials div {
-        padding: 2px;
-      }
-
-      #slide-panel {
-        -moz-border-radius-bottomleft: 10px;
-        -moz-border-radius-topleft: 10px;
-        -webkit-border-bottom-left-radius: 10px;
-        -webkit-border-top-left-radius: 10px;
-        background: #EFEFEF;
-        border: 1px solid #111111;
-        display: none;
-        filter: alpha(opacity=85);
-        height: auto;
-        right: 0;
-        opacity: .65;
-        padding: 60px 20px 20px 20px;
-        position: absolute;
-        top: 120px;
-        width: 260px;
-      }
-
-      #slide-trigger {
-        -moz-border-radius-bottomright: 0px;
-        -moz-border-radius-bottomleft: 10px;
-        -moz-border-radius-topleft: 10px;
-        -webkit-border-bottom-right-radius: 0px;
-        -webkit-border-bottom-left-radius: 10px;
-        -webkit-border-top-left-radius: 10px;
-        background:#333333;
-        border:1px solid #444444;
-        color:#fff;
-        display: block;
-        font-family: verdana, helvetica, arial, sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing:-1px;
-        padding: 10px 15px 10px 10px;
-        position: absolute;
-        right: 0;
-        text-decoration: none;
-        top: 130px;
-      }
-
-  %script(type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js")
-  %script(type="text/javascript" src="assets/javascript/jtweetsanywhere.js")
-  %script(type="text/javascript" src="assets/javascript/jquery.vibrate.js")
-  %script(type="text/javascript")
-    :plain
-      $(document).ready(function(){
-
-        // twitter news slide panel
-        $("#slide-trigger").click(function(){
-            $("#slide-panel").toggle("fast");
-
-            return false;
+          $('#menubar .focus').mouseout(function() {
+            var id = $(this).attr("data-shiver-id");
+            $(id).hide();
+          });
         });
-
-        $("#_slide-panel").mouseout(function() {
-          $(this).toggle("fast");
-        });
-
-        $('#latest-tweets').jTweetsAnywhere({
-          username: 'verticonaut',
-          count: 5,
-          showFollowButton: true
-        });
-
-        // vibrate stuff
-        $('#splash .focus').mouseenter(function() {
-          // ele is area to shiver
-          var id = $(this).attr("data-shiver-id");
-          var ele = $(id);
-          ele.attr('data-mouse', 'shiver');
-          ele.show();
-          
-          // set menu item color
-          var menu_ref = ele.attr('data-menu-item');
-          $('.'+menu_ref).addClass(menu_ref + '-hover');
-
-          // start shiver ele
-          ele.vibrate({spread: 7, frequency: 1000, duration: 1000, speed: 50});
-        });
-
-        $('#menubar .focus').mouseenter(function() {
-          var id = $(this).attr("data-shiver-id");
-          var ele = $(id);
-          ele.show();
-          ele.vibrate({spread: 7, frequency: 1000, duration: 1000, speed: 50});
-        });
-
-        $('.shiver').mouseout(function() {
-          var menu_ref = $(this).attr('data-menu-item');
-          $('.'+menu_ref).removeClass(menu_ref + '-hover').addClass(menu_ref);
-
-          if ($(this).attr('data-mouse')) {
-            $(this).hide(); 
-          }
-        });
-
-        $('#menubar .focus').mouseout(function() {
-          var id = $(this).attr("data-shiver-id");
-          $(id).hide();
-        });
-      });
-    
+      
 
 
   %body
@@ -267,7 +128,7 @@
       / #funbar(style="position: relative; top: 200px; background-color: red; width: 700px;  margin-left: 0; margin-right: auto;")
       /   _
 
-    #menubar.nolink(style="margin-left: auto; margin-right: auto; _background-color: grey; width: 696px;")
+    #menubar.nolink(style="margin-left: auto; margin-right: auto; _background-color: grey; width: 696px; height: 70px;")
       %a(href="/detail/climbing")
         .menu-item-color-1.item.first.focus(data-shiver-id="#shiver-climbing")
           Climbing
@@ -283,7 +144,7 @@
       %a(href="/detail/about")
         .menu-item-color-5.item.focus(data-shiver-id="#shiver-about")
           About
-      .clear-floats
+    .clear-floats
 
     #footer(style="margin-left: auto; margin-right: auto; background-color: _green; width: 700px;")
       #footer-content(style ="padding: 10px 0 20px 0; text-align: center; font-size: 9pt;")

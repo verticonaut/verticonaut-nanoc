@@ -1,0 +1,89 @@
+@import compass/reset
+@import base
+@import menu_a_colors
+
+
+#menubar 
+  .item
+    _border:          1px solid black
+    _background-color: blue
+    float:            left
+    height:           45px
+    margin:           0 1px
+    width:            134px
+    text-align:       center
+    padding-top:      25px
+
+  .first
+    margin-left: 8px
+
+  a
+    text-decoration: none
+    color: black
+
+
+.menu-item-color-1-hover
+  background: $color-climbing-hov
+.menu-item-color-2-hover
+  background: $color-photo-hov
+.menu-item-color-3-hover
+  background: $color-projects-hov
+.menu-item-color-4-hover
+  background: $color-thoughts-hov
+.menu-item-color-5-hover
+  background: $color-thoughts-hov
+
+
+#heartbeat
+  _border: 1px solid red
+  height: 16px
+  position: absolute 
+  width: 16px
+  z-index: 10
+
+  &:hover
+    background-image:  url(assets/img/heart_16.png)
+    background-repeat: no-repeat
+
+#socials
+  div
+    padding: 2px
+
+#slide-panel
+  -moz-border-radius-bottomleft: 10px
+  -moz-border-radius-topleft: 10px
+  -webkit-border-bottom-left-radius: 10px
+  -webkit-border-top-left-radius: 10px
+  background: #EFEFEF
+  border: 1px solid #111111
+  display: none
+  filter: alpha(opacity=85)
+  height: auto
+  right: 0
+  opacity: .65
+  padding: 60px 20px 20px 20px
+  position: absolute
+  top: 120px
+  width: 260px
+
+#slide-trigger
+  -moz-border-radius-bottomright: 0px
+  -moz-border-radius-bottomleft: 10px
+  -moz-border-radius-topleft: 10px
+  -webkit-border-bottom-right-radius: 0px
+  -webkit-border-bottom-left-radius: 10px
+  -webkit-border-top-left-radius: 10px
+  background: #333333
+  border: 1px solid #444444
+  color: #fff
+  display: block
+  font-family: verdana, helvetica, arial, sans-serif
+  font-size: 12px
+  font-weight: 600
+  letter-spacing: -1px
+  padding: 10px 15px 10px 10px
+  position: absolute
+  right: 0
+  text-decoration: none
+  top: 130px
+

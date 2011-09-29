@@ -13,14 +13,27 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+# I want to work with compass (see https://github.com/chriseppstein/compass/wiki/nanoc-Integration)
+require 'compass'
+Compass.add_project_configuration 'compass/config.rb' # when using Compass 0.10
+
+
 # Don't filter or layout any google files, robots.txt, error pages or anything
 # else in the assets directory.
-compile %r{^/assets/(javascript|styles)/} do
+compile %r{^/assets/javascript/} do
+  # don’t standard css
 end
 
-compile 'detail/*' do
-  filter :haml
-  layout 'detail'
+compile %r{^/assets/styles/css/} do
+  # don’t standard css
+end
+
+compile %r{^/assets/styles/sass/_} do 
+  # don’t standard css
+end 
+
+compile %r{^/assets/styles/sass/} do
+  filter :sass, Compass.sass_engine_options
 end
 
 
@@ -28,17 +41,38 @@ compile '*' do
   if item.binary?
     # don’t filter binary items
   else
-    filter :haml
-    layout 'default'
+    filter :erb
+    case item[:extension]
+      when 'txt'
+        filter :redcloth
+      when 'md'
+        filter :kramdown
+      when 'html.haml'
+        filter :haml
+    end
+    if @item[:layout]
+      layout(@item[:layout])
+    elsif @item.identifier =~ /\/detail\//
+      layout 'detail'
+    # elsif @item[:kind] == 'article'
+    #   layout 'article'
+    else
+      layout 'default'
+    end
   end
-end
-
-route %r{^/assets/styles/} do
-  item.identifier.chop + '.' + item[:extension]
 end
 
 route %r{^/assets/javascript/} do
   item.identifier.chop + '.' + item[:extension]
+end
+
+route %r{^/assets/styles/sass/_} do
+  # don't output partials, so return nil
+  nil
+end
+
+route %r{^/assets/styles/(sass|css)/} do
+  item.identifier.gsub(/\/(sass|css)\//, '/').chop + '.css'
 end
 
 route '*' do

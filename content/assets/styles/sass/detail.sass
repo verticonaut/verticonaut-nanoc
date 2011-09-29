@@ -1,0 +1,59 @@
+@import base
+@import menu_a_colors
+
+//@import compass/reset.scss
+@import compass/layout.scss
+
+.container
+  margin-left: auto
+  margin-right: auto
+  width: 960px
+  min-height: 400px
+
+#header
+  font-size:  24pt
+  padding:    20px 0 10px 15px
+
+#home
+  float: right
+  width: 250px
+  padding-top: 10px
+  font-size: 16pt
+  text-align: right
+  padding-right: 10px
+
+#content
+  _font-family: PT Serif, Georgia, Times
+  font-family: Arial, sans-serif
+  font-size: 14pt
+  background-image: url('/assets/img/background.png')
+  background-color: #F8F8F8
+  min-height: 550px
+
+// footer stuff 
++sticky-footer(72px, "#layout", "#layout_footer", "#footer")
+
+#menubar
+  .item
+    _border:          1px solid black
+    _background-color: blue
+    float:            left
+    height:           25px
+    margin:           0 1px
+    width:            188px
+    text-align:       center
+
+  .first
+    margin-left: 5px
+
+  p
+    margin-top: 3px
+
+
+// footer stuff 
++sticky-footer(72px, "#layout", "#layout_footer", "#footer")
+
+#footer-caption
+  padding: 10px 0 20px 0
+  text-align: center
+  font-size: 9pt
