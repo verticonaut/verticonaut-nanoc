@@ -1,0 +1,10 @@
+.gallery-summary
+  .splash(style="float: right;")
+    %a(href="#{@gallery[:url]}" target="_blank")
+      %img(src="/assets/galleries/#{@gallery[:thumbnail]}" style="width: 100px; height: 100px;")
+
+  %h4
+    %a(href="#{@gallery[:url]}" target="_blank")
+      = @gallery[:gallery_title]
+
+  

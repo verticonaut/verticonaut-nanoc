@@ -17,9 +17,18 @@
 require 'compass'
 Compass.add_project_configuration 'compass/config.rb' # when using Compass 0.10
 
+preprocess do
+  @site.memory = {}
 
-# Don't filter or layout any google files, robots.txt, error pages or anything
-# else in the assets directory.
+  fetch_galleries
+  
+  create_item('/detail/photography/', :title => "Photography", :'base-color' => "#94b394", :layout => "detail_photography")
+end
+
+compile '/photography/galleries/*/' do
+  # don’t standard css
+end
+
 compile %r{^/assets/javascript/} do
   # don’t standard css
 end
@@ -67,6 +76,11 @@ route %r{^/assets/javascript/} do
 end
 
 route %r{^/assets/styles/sass/_} do
+  # don't output partials, so return nil
+  nil
+end
+
+route '/photography/galleries/*/' do
   # don't output partials, so return nil
   nil
 end
