@@ -1,11 +1,17 @@
 @import compass
 
+$experimental-support-for-svg: true
+
 *
   margin: 0
   padding: 0
   _font-family: Georgia, Palatino, Times, 'Times New Roman', sans-serif
   font-family: Arial, sans-serif
   _font-size: 14pt
+
+@mixin gradient($color)
+  background: -webkit-gradient(linear, right top, left bottom, from($color), to(#eee))
+  background: -moz-linear-gradient(-135deg, $color, #eee)
 
 .clear-float
   clear: both
@@ -38,12 +44,25 @@ a
 .padder
   padding: 15px
 
+.small-note
+  font-size: 10pt
+
 h1
   font-weight: bold
-  font-size: 16px
+  font-size: 16pt
+  margin: 5px 0 10px
 h2
   font-weight: bold
-  font-size: 14px
+  font-size: 14pt
+  margin: 5px 0 10px
+h3
+  font-weight: bold
+  font-size: 12pt
+  margin: 5px 0 10px
+h4
+  font-weight: bold
+  font-size: 11pt
+  margin: 5px 0 10px
 
 dt
   font-weight: bold

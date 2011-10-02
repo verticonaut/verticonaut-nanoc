@@ -1,0 +1,31 @@
+@import base
+@import menu_a_colors
+@import detail
+
+#projects
+  margin: 0
+  padding: 0
+
+  .page-intro
+    padding: 10px 0 20px
+
+  .detail-item
+    //+background-image(linear-gradient(left top, #fff, #ddd))
+    @include gradient(adjust-lightness($color-projects, 25%))
+    margin: 10px 0 20px 0
+    padding: 0.5em 1em
+    border-left: 4px solid rgba(170, 170, 170, 0.5)
+    background-color: #fefefe
+
+
+  p
+    margin-bottom: 10px
+
+  blockquote
+    font-style: italic
+    position: relative
+    font-size: 1.2em
+    line-height: 1.5em
+    padding-left: 1em
+    border-left: 4px solid rgba(170, 170, 170, 0.5)
+
