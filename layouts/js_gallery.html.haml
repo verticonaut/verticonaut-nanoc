@@ -1,0 +1,41 @@
+!!!
+%html
+
+  %head
+    %meta(charset="utf-8")
+    %meta(name="generator" content="nanoc 3.2.2")
+
+    %title= "verticonaut - #{@item[:title]}"
+
+    %link(rel="stylesheet" type="text/css" href="/assets/javascript/galleria/themes/twelve/galleria_twelve.css" media="screen")
+
+    %script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js")
+    %script(type="text/javascript" src="/assets/javascript/galleria/galleria-1_2_5_min.js")
+
+    %script(type="text/javascript")
+      :plain
+        Galleria.loadTheme('/assets/javascript/galleria/themes/twelve/galleria_twelve_.js');
+
+        $(document).ready(function(){
+
+          $("#gallery").galleria({
+            width: 500,
+            height: 500
+          });
+        });
+
+
+  %body
+    .content
+      #gallery(style="height: 400px;")
+        %img(src="/assets/img/me.jpg")
+        %img(src="/assets/img/me.jpg")
+        %img(src="/assets/img/me.jpg")
+        %img(src="/assets/img/me.jpg")
+        %img(src="/assets/img/me.jpg")
+
+    / %script
+    /   :plain
+    /     Galleria.loadTheme('/assets/javascript/galleria/themes/twelve/galleria_twelve_.js');
+    /     $("#gallery").galleria();
+    

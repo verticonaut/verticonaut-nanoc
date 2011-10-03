@@ -25,21 +25,24 @@ preprocess do
   # somehow I need to delete the output of the stuff I create later?
   %x(rm 'output/detail/photography/index.html')
   create_item('/detail/photography/', :title => "Photography", :'base-color' => "#94b394", :layout => "detail_photography")
+
+    
+  # create_item('/detail/photography/', :title => "Photography", :'base-color' => "#94b394", :layout => "detail_photography")
 end
 
 # compile '/photography/galleries/*/' do
 #   # don’t standard css
 # end
 
-compile %r{^/photography/galleries/.*/_meta} do
-  # don’t compile galler metas
-end
+# compile %r{^/photography/galleries/.*/_meta} do
+#   # don’t compile galler metas
+# end
 
-compile %r{^/assets/javascript/} do
+compile %r{^/assets/javascript/.*} do
   # don’t standard css
 end
 
-compile %r{^/assets/styles/css/} do
+compile %r{^/assets/styles/css/.*} do
   # don’t standard css
 end
 
@@ -77,8 +80,12 @@ compile '*' do
   end
 end
 
-route %r{^/assets/javascript/} do
-  item.identifier.chop + '.' + item[:extension]
+route %r{^/assets/javascript/.*} do
+  if item[:extension]
+    item.identifier.chop + '.' + item[:extension]
+  else
+    item.identifier.chop
+  end
 end
 
 route %r{^/assets/styles/sass/_} do
@@ -87,11 +94,10 @@ route %r{^/assets/styles/sass/_} do
 end
 
 route %r{^/photography/galleries/.*/_meta} do
-  # don't output partials, so return nil
-  nil
+  item.identifier.gsub(/_meta\//, '') + 'index.html'
 end
 
-route %r{^/assets/styles/(sass|css)/} do
+route %r{^/assets/styles/(sass|:81css)/} do
   item.identifier.gsub(/\/(sass|css)\//, '/').chop + '.css'
 end
 

@@ -22,7 +22,7 @@
         #content.padder
           %h3 Galleries
           - @site[:galleries].each do |i|
-            != render "gallery", :gallery => i
+            != render "_gallery", :gallery => i
 
         #layout_footer
       #footer
