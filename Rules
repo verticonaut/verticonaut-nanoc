@@ -97,7 +97,7 @@ route %r{^/photography/galleries/.*/_meta} do
   item.identifier.gsub(/_meta\//, '') + 'index.html'
 end
 
-route %r{^/assets/styles/(sass|:81css)/} do
+route %r{^/assets/styles/(sass|css)/} do
   item.identifier.gsub(/\/(sass|css)\//, '/').chop + '.css'
 end
 

@@ -5,11 +5,11 @@
     = Constants::MONTH[@gallery[:month]]
   .gallery-summary(style="left: 40px; top: 0; right: 0px; width: 820px;")
     .splash(style="float: right;")
-      %a(href="#{@gallery[:url]}" target="_blank")
+      %a(href="#{gallery_url(@gallery)}" target="_blank")
         %img(src="#{File.dirname(@gallery.identifier)}/_splash.jpg" style="width: 100px; height: 100px;")
 
     %h4
-      %a(href="#{@gallery[:url]}" target="_blank")
+      %a(href="#{gallery_url(@gallery)}" target="_blank")
         = @gallery[:gallery_title]
 
     %p

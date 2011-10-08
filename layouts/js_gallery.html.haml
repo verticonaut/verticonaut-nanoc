@@ -7,6 +7,7 @@
 
     %title= "verticonaut - #{@item[:title]}"
 
+    %link(rel="stylesheet" type="text/css" href="/assets/styles/detail.css" media="screen")
     %link(rel="stylesheet" type="text/css" href="/assets/javascript/galleria/themes/twelve/galleria_twelve.css" media="screen")
 
     %script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js")
@@ -18,24 +19,43 @@
 
         $(document).ready(function(){
 
+          var gallery_data = #{build_gallery_data(@item).to_json};                
+
           $("#gallery").galleria({
-            width: 500,
-            height: 500
+            width: 826,
+            height: 432,
+            imageCrop: true,
+            dataSource:  gallery_data
           });
         });
 
 
-  %body
-    .content
-      #gallery(style="height: 400px;")
-        %img(src="/assets/img/me.jpg")
-        %img(src="/assets/img/me.jpg")
-        %img(src="/assets/img/me.jpg")
-        %img(src="/assets/img/me.jpg")
-        %img(src="/assets/img/me.jpg")
+    %style
+      :sass
+        #preview-body
+          position: absolute
+          margin-top: 100px
+          _padding-left: auto
+          _padding-right: auto
+          _border: 10px solid grey
+          _df: 12
+          width: 826px
+          _margin: 30px auto
+          _height: 432px
+          background: #FFFFFF
+          padding: 12px
+          -moz-box-shadow: 0 3px 9px rgba(0, 0, 0, .2)
+          -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .2)
+          box-shadow: 0 3px 9px rgba(0, 0, 0, .2)
 
-    / %script
-    /   :plain
-    /     Galleria.loadTheme('/assets/javascript/galleria/themes/twelve/galleria_twelve_.js');
-    /     $("#gallery").galleria();
-    
+  / (style="position: absolute; margin-top: 100px; padding-left: auto; padding-right: auto; border: 10px solid grey; ")
+
+  %body(style="background-image: url(/assets/img/background_02.png)")
+    #content(style="margin-left: auto; margin-right: auto; width: 850px; height: 700px; background-color: transparent;")
+      #title.nolink(style="float: right; width: 250px; padding-top: 15px; z-index: 99;")
+        #title-text.nolink(style="float: right; _position: absolute; top: 0; right: 0; width: 250px; border-bottom: 2px solid silver; font-size: 24pt; text-align: right;")
+          %a.nolink(href="/") verticonaut
+      .clear-float
+
+      #preview-body
+        #gallery
