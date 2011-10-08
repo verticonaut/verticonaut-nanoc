@@ -7,7 +7,7 @@ def fetch_galleries
   @site[:galleries] ||= @site.items.
     select {|i| i.identifier =~ /photography\/galleries\/\d{4}-.*\/_meta/}.
     sort_by {|i| -1 * (i[:year]*100 + i[:month])}
-  @site[:special_galleries] ||= @site.items.
+  @site[:featured_galleries] ||= @site.items.
     select {|i| i.identifier =~ /photography\/galleries\/_.*\/_meta/}.
     sort_by {|i| i[:position]}
 end

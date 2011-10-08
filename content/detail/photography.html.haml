@@ -8,7 +8,7 @@ stylesheet: galleries
 .section(style="margin-top: 15px")
   Featured
 
-- @site[:special_galleries].each do |i|
+- @site[:featured_galleries].each do |i|
   != render "_gallery", :gallery => i
 
 
