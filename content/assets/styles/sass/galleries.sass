@@ -1,14 +1,24 @@
 @import base
 @import menu_a_colors
-@import detail
 
 //@import compass/reset.scss
 //@import compass/layout.scss
 
+.section
+  +border-radius(3px)
+  background-color: adjust-lightness($color-photo, 7%)
+  _background-color: adjust-lightness(#222222, 50%)
+  font-weight: bold
+  margin-top: 40px
+  left: 0
+  right 0
+  padding: 5px
+  vertical-align: middle
+
 .gallery-item
   .time-box
     +border-radius(6px)
-    background-color: adjust-lightness($color-photo, 10%)
+    background-color: adjust-lightness($color-photo, 15%)
     float: left
     position: relative
     left: 0px

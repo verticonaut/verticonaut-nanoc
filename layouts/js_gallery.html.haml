@@ -33,16 +33,14 @@
     %style
       :sass
         #preview-body
-          position: absolute
-          margin-top: 70px
-          width: 826px
-          background: #FFFFFF
-          padding: 12px
           -moz-box-shadow: 0 3px 9px rgba(0, 0, 0, .2)
           -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .2)
+          background: #FFFFFF
           box-shadow: 0 3px 9px rgba(0, 0, 0, .2)
-
-  / (style="position: absolute; margin-top: 100px; padding-left: auto; padding-right: auto; border: 10px solid grey; ")
+          margin-top: 70px
+          padding: 12px
+          position: absolute
+          width: 826px
 
   %body(style="background-image: url(/assets/img/background_02.png)")
     #content(style="margin-left: auto; margin-right: auto; width: 850px; height: 700px; background-color: transparent;")
@@ -54,5 +52,5 @@
       #preview-body
         #gallery
       .nolink
-        %a(href="#{galleries_url}")
+        %a(href="#{galleries_url}/##{marker_name(@item)}")
           < Galleries

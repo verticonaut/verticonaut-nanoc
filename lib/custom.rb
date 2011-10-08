@@ -64,6 +64,10 @@ def gallery_target(gallery_item)
   end
 end
 
+def marker_name(item)
+  item.identifier.gsub('/', '_')
+end
+
 def galleries_url
   "/detail/photography"
 end

@@ -23,10 +23,8 @@ preprocess do
   fetch_galleries
   
   # somehow I need to delete the output of the stuff I create later?
-  %x(rm 'output/detail/photography/index.html')
-  create_item('/detail/photography/', :title => "Photography", :'base-color' => "#94b394", :layout => "detail_photography")
-
-    
+  # %x(rm 'output/detail/photography/index.html')
+  # create_item('/detail/photography/', :title => "Photography", :'base-color' => "#94b394", :layout => "detail")
   # create_item('/detail/photography/', :title => "Photography", :'base-color' => "#94b394", :layout => "detail_photography")
 end
 
@@ -46,11 +44,7 @@ compile %r{^/assets/styles/css/.*} do
   # don’t standard css
 end
 
-compile %r{^/assets/styles/sass/_} do 
-  # don’t standard css
-end 
-
-compile %r{^/assets/styles/sass/} do
+compile %r{^/assets/styles/sass/.*} do
   filter :sass, Compass.sass_engine_options
 end
 

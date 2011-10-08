@@ -2,8 +2,63 @@
 @import base
 @import menu_a_colors
 
+#content
+  margin-left: auto
+  margin-right: auto
+  width: 700px
+  height: 800px
 
-#menubar 
+#title
+  position: absolute
+  top: 0
+  right: 100px
+  width: 250px
+  padding-top: 15px
+  z-index: 99
+
+#title-text
+  float: right
+  top: 0
+  right: 0
+  width: 250px
+  border-bottom: 2px solid silver
+  font-size: 24pt
+  text-align: right
+
+#socials
+  float: right
+  padding-top: 2px
+  z-index: 99
+
+  div
+    float: right
+    padding: 2px
+    
+#splash
+  position: absolute
+  top: 45px
+  bottom: 0
+  width: 800px
+  margin-left: auto
+  margin-right: auto
+
+  .focus
+    _border: 1px solid red
+    z-index: 10
+
+  .shiver
+    _border: 1px solid black
+    display: none
+    z-index: 9
+
+#menubar
+  margin-left: auto
+  margin-right: auto
+  _background-color: grey
+  width: 696px
+  height: 70px
+  font-family: Arial, sans-serif
+
   .item
     _border:          1px solid black
     _background-color: blue
@@ -17,39 +72,24 @@
   .first
     margin-left: 8px
 
+
+#footer
+  margin-left: auto
+  margin-right: auto
+  _background-color: green
+  width: 700px
+
+#footer-content
+  padding: 10px 0 20px 0
+  text-align: center
+  font-size: 9pt
+
   a
-    text-decoration: none
-    color: black
+    color: red
 
-
-.menu-item-color-1-hover
-  background: $color-climbing-hov
-.menu-item-color-2-hover
-  background: $color-photo-hov
-.menu-item-color-3-hover
-  background: $color-projects-hov
-.menu-item-color-4-hover
-  background: $color-thoughts-hov
-.menu-item-color-5-hover
-  background: $color-thoughts-hov
-
-
-#heartbeat
-  _border: 1px solid red
-  height: 16px
-  position: absolute 
-  width: 16px
-  z-index: 10
-
-  &:hover
-    background-image:  url(assets/img/heart_16.png)
-    background-repeat: no-repeat
-
-#socials
-  div
-    padding: 2px
 
 #slide-panel
+  font-family: Helvetica, Arial, sans-serif
   -moz-border-radius-bottomleft: 10px
   -moz-border-radius-topleft: 10px
   -webkit-border-bottom-left-radius: 10px
@@ -65,6 +105,19 @@
   position: absolute
   top: 120px
   width: 260px
+
+  #tweety
+    position: absolute
+    left: 19px
+    top: 15px
+
+  #tweety_title
+    position: absolute
+    left: 60px
+    top: 21px
+
+  #latest-tweets
+    font-size: 10pt
 
 #slide-trigger
   -moz-border-radius-bottomright: 0px

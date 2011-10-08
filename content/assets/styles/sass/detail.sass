@@ -40,12 +40,12 @@
     _background-color: blue
     float:            left
     height:           25px
-    margin:           0 1px
+    margin:           0 1px 0 0
     width:            188px
     text-align:       center
 
   .first
-    margin-left: 5px
+    margin-left: 0px
 
   p
     margin-top: 3px
@@ -54,7 +54,20 @@
 // footer stuff 
 +sticky-footer(72px, "#layout", "#layout_footer", "#footer")
 
-#footer-caption
+#footer
+  margin-left: auto
+  margin-right: auto
+  _background-color: green
+  width: 960px
+
+
+#footer-content
+  margin-left: auto
+  margin-right: auto
   padding: 10px 0 20px 0
   text-align: center
   font-size: 9pt
+
+  a
+    color: red
+
