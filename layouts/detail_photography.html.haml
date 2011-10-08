@@ -20,6 +20,11 @@
           .clear-float
      
         #content.padder
+  
+          %h3 Featured
+          - @site[:special_galleries].each do |i|
+            != render "_gallery", :gallery => i
+
           %h3 Galleries
           - @site[:galleries].each do |i|
             != render "_gallery", :gallery => i

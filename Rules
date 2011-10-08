@@ -93,6 +93,11 @@ route %r{^/assets/styles/sass/_} do
   nil
 end
 
+route %r{^.*/README.*} do
+  # don't output READMES, so return nil
+  nil
+end
+
 route %r{^/photography/galleries/.*/_meta} do
   item.identifier.gsub(/_meta\//, '') + 'index.html'
 end

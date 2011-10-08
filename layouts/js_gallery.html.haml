@@ -23,7 +23,7 @@
 
           $("#gallery").galleria({
             width: 826,
-            height: 432,
+            height: 500,
             imageCrop: true,
             dataSource:  gallery_data
           });
@@ -34,14 +34,8 @@
       :sass
         #preview-body
           position: absolute
-          margin-top: 100px
-          _padding-left: auto
-          _padding-right: auto
-          _border: 10px solid grey
-          _df: 12
+          margin-top: 70px
           width: 826px
-          _margin: 30px auto
-          _height: 432px
           background: #FFFFFF
           padding: 12px
           -moz-box-shadow: 0 3px 9px rgba(0, 0, 0, .2)
@@ -59,3 +53,6 @@
 
       #preview-body
         #gallery
+      .nolink
+        %a(href="#{galleries_url}")
+          < Galleries
