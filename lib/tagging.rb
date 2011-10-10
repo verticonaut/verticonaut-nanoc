@@ -44,12 +44,8 @@ def collect_gallery_items
 end
 
 def collect_gallery_tags
-  # get the items
   items = collect_gallery_items
-
-  collect_item_tags(:galleries, items) do |item|
-    %w[gallery featured_gallery].include? item[:kind]
-  end
+  collect_item_tags(:galleries, items)
 end
 
 def gallery_items_with_tag(tag)
