@@ -1,0 +1,52 @@
+!!!
+%html
+
+  %head
+    %meta(charset="utf-8")
+    %meta(name="generator" content="nanoc 3.2.2")
+
+    %title= "verticonaut - #{@item[:title]}"
+
+    %link(rel="stylesheet" type="text/css" href="/assets/styles/detail.css" media="screen")
+    - if (stylesheet = @item[:stylesheet]) then
+      %link(rel="stylesheet" type="text/css" href="/assets/styles/#{stylesheet}.css" media="screen")
+
+    %script(type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js")
+    %script(type="text/javascript" src="/assets/javascript/site.js")
+
+  %body
+    .container
+      #layout
+        #header.nolink{:style => "background: #{@item[:'base-color']};"}
+          #{@item[:title]}
+          #home
+            %a(href="/") verticonaut
+          .clear-float
+     
+        #content.padder
+          = yield 
+
+        #layout_footer
+
+      #footer
+        #menubar.nolink
+          %a(href="/detail/climbing")
+            .menu-item-color-1.item.first(style="width: 195px;")
+              %p Climbing
+          %a(href="/detail/photography")
+            .menu-item-color-2.item
+              %p Photography
+          %a(href="/detail/projects")
+            .menu-item-color-3.item
+              %p Projects
+          %a(href="/detail/thoughts")
+            .menu-item-color-4.item
+              %p Thoughts
+          %a(href="/detail/about")
+            .menu-item-color-5.item(style="width: 196px;")
+              %p About
+          .clear-float
+
+        #footer-content
+          Design by Martin Schweizer - 2011 - Built with
+          %a(href="http://nanoc.stoneship.org/" target="_blank") Nanoc

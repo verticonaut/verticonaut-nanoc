@@ -3,6 +3,7 @@ require 'xmp'
 require 'exifr'
 require 'open-uri'
 
+
 def fetch_galleries
   @site[:galleries] ||= @site.items.
     select {|i| i.identifier =~ /photography\/galleries\/\d{4}-.*\/_meta/}.

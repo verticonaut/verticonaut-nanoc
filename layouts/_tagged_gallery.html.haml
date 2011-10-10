@@ -1,0 +1,19 @@
+--- 
+title:      Photography
+base-color: '#94b394'
+stylesheet: galleries
+---
+
+
+.section(style="margin-top: 15px")
+  Featured
+
+- @site[:featured_galleries].each do |i|
+  != render "_gallery", :gallery => i
+
+
+.section
+  Galleries
+
+- @site[:galleries].each do |i|
+  != render "_gallery", :gallery => i

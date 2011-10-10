@@ -5,15 +5,31 @@ stylesheet: galleries
 ---
 
 
-.section(style="margin-top: 15px")
-  Featured
+#tag-clouds
+  .tag-cloud
+    %h4 Galleries by tag
+    %ul.tagcloud
+      - gallery_tag_cloud(:galleries).each do |tag|
+        %li{:style => "font-size: #{tag.size}pt"}
+          %a{:href => "/photography/tags/#{tag.name}/"} #{tag.name}
 
-- @site[:featured_galleries].each do |i|
-  != render "_gallery", :gallery => i
+  .tag-cloud
+    %h4 Images by tag
+    %ul.tagcloud
+      - gallery_tag_cloud(:galleries).each do |tag|
+        %li{:style => "font-size: #{tag.size}pt"}
+          %a{:href => "/photography/tags/#{tag.name}/"} #{tag.name}
 
+#galleries
+  .section(style="margin-top: 15px")
+    Featured
 
-.section
-  Galleries
+  - @site[:featured_galleries].each do |item|
+    != render "_gallery", :gallery => item
 
-- @site[:galleries].each do |i|
-  != render "_gallery", :gallery => i
+  .section
+    Galleries
+
+  - @site[:galleries].each do |item|
+    != render "_gallery", :gallery => item
+

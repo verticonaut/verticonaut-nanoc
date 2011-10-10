@@ -1,14 +1,14 @@
 %a(name="#{marker_name(@gallery)}" id="#{marker_name(@gallery)}")
 
-.gallery-item(style="right: 20px; margin: 10px 10px 10px 0px")
+.gallery-item
   - if @gallery[:year]
-    .time-box(style="float: left; position: relative; left: 0px; top: 0; width: 50px; height: 42px; border: 1px silver solid; text-align: center; padding-top: 10px; font-weight: bold;")
+    .time-box
       = @gallery[:year]
       %br
       = Constants::MONTH[@gallery[:month]]
 
-  .gallery-summary(style="left: 40px; top: 0; right: 0px; width: 820px;")
-    .splash(style="float: right;")
+  .gallery-summary
+    .splash
       %a(href="#{gallery_url(@gallery)}" target="#{gallery_target(@gallery)}")
         %img(src="#{File.dirname(@gallery.identifier)}/_splash.jpg" style="width: 100px; height: 100px;")
 
