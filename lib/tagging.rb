@@ -12,12 +12,12 @@ MONTHS = {
   
 def tag_set(key)
   @site[:tags] ||= {}
-  @site[:tags][:key]
+  @site[:tags][key]
 end
 
 def add_tag_set(key, tags)
   @site[:tags] ||= {}
-  @site[:tags][:key] = tags
+  @site[:tags][key] = tags
 end
 
 def collect_items
@@ -27,8 +27,9 @@ end
 def collect_item_tags(key, items)
   # build tags
   tags = Set.new
-  items.each do |i|
-    (i[:tags] || []).each do |tag|
+  items.each do |item|
+    item_tags = block_given? ? yield(item) : item[:tags]
+    (item_tags || []).each do |tag|
       tags.add(tag)
     end
   end
@@ -54,52 +55,81 @@ def gallery_items_with_tag(tag)
     sort_by {|i| -1 * (i[:year] ? (i[:year]*100 + i[:month]) : -1)}
 end
 
+def image_items_with_tag(tag)
+  collect_image_items.
+    select {|i| (i[:tags] || []).include?(tag)}.
+    sort_by {|i| -1 * (i[:year] ? (i[:year]*100 + i[:month]) : -1)}
+end
+
 def create_gallery_tag_items
   tag_set(:galleries).each do |tag|
-    create_item "/photography/tags/#{tag}/",
+    create_item "/photography/galleries/tagged/#{tag}/",
       :tag          => tag,
       :layout       => 'gallery_tag_page',
-      :title        => 'Photography',
+      :title        => "Photography",
       :'base-color' => '#94b394',
       :stylesheet   => 'galleries'
   end
 end
 
+def collect_image_tags
+  items = collect_image_items
 
+  @site[:tag_image_cache] = {}
+  collect_item_tags(:gallery_images, items) do |item|
+    img = EXIFR::JPEG.new(item.raw_filename)
+    xmp = XMP.parse(img)
 
-def collect_chrono
-  years = Set.new
-  months = {}
-  articles.each do |i|
-    cdate = i[:created_at]
-    years.add(cdate.year)
-    (months[cdate.year] ||= Set.new).add(cdate.month)
-  end
-  months.each do |k, v|
-    months[k] = v.to_a.sort
-  end
-  @site[:years] = years.to_a.sort
-  @site[:months] = months
-end
+    begin
+      tags = xmp.dc.subject || []
+    rescue => e
+      puts "*" * 100
+      # puts e.stacktrace
+      tags = []
+    end
 
-def create_tag_items
-  @site[:tags].each do |tag|
-    create_item "/tags/#{tag}/", :tag => tag, :layout => "tag_page",
-                                 :title => "Articles tagged #{tag}"
-  end
-end
-
-def create_chrono_items
-  @site[:years].each do |year|
-    create_item "/#{year}/", :year => year, :layout => "year_page",
-                             :title => "Articles from #{year}"
-    @site[:months][year].each do |month|
-      create_item "/#{year}/#{month}/", :year => year, :month => month,
-                                        :layout => "month_page",
-                                        :title => "Articles from #{MONTHS[month]} #{year}"
+    tags.each do |tag|
+      (@site[:tag_image_cache][tag] ||= []) << item
     end
   end
 end
+
+def collect_image_items
+  collect_items do |item|
+    item.identifier =~ /photography\/galleries\/[^\/]+\/image_\d*/
+  end
+end
+
+def create_image_tag_items
+  tag_set(:gallery_images).each do |tag|
+    create_item "/photography/images/tagged/#{tag}/",
+      :tag          => tag,
+      :layout       => 'image_tag_page',
+      :title        => "Images tagged '#{tag}'",
+      :'base-color' => '#94b394',
+      :stylesheet   => 'galleries'
+  end
+end
+
+def gallery_tag_cloud
+  cloud = []
+  tag_set(:galleries).each do |tag|
+    cloud << CloudTag.new(tag, gallery_items_with_tag(tag).length)
+  end
+  cloud
+end
+
+def image_tag_cloud
+  cloud = []
+  tag_set(:gallery_images).each do |tag|
+    cloud << CloudTag.new(tag, @site[:tag_image_cache][tag].length)
+  end
+  cloud
+end
+
+
+
+# ****************************************************************************
 
 class CloudTag
   attr_accessor :name
@@ -112,32 +142,6 @@ class CloudTag
   
   def size
     8 + (Math.log(@count).to_i) * 2
-  end
-end
-
-def gallery_tag_cloud(key)
-  cloud = []
-  tag_set(key).each do |tag|
-    cloud << CloudTag.new(tag, gallery_items_with_tag(tag).length)
-  end
-  cloud
-end
-
-def canonicalize_years
-  @items.each do |i|
-    ctime = i[:created_at]
-    i[:created_at] = Time.parse(ctime) if ctime.is_a?(String)
-  end
-end
-
-def articles_for_year (year)
-  articles.select { |i| i[:created_at].year == year }
-end
-
-def articles_for_month (year, month)
-  articles.select do |i|
-    cdate = i[:created_at]
-    cdate.year == year && cdate.month == month
   end
 end
 

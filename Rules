@@ -25,10 +25,9 @@ preprocess do
   # canonicalize_years
   collect_gallery_tags
   create_gallery_tag_items
-  # collect_chrono
-  # create_tag_items
-  # create_chrono_items  
-  # somehow I need to delete the output of the stuff I create later?
+
+  collect_image_tags
+  create_image_tag_items
   # %x(rm 'output/detail/photography/index.html')
   # create_item('/detail/photography/', :title => "Photography", :'base-color' => "#94b394", :layout => "detail")
   # create_item('/detail/photography/', :title => "Photography", :'base-color' => "#94b394", :layout => "detail_photography")

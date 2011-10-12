@@ -19,7 +19,7 @@
 
         $(document).ready(function(){
 
-          var gallery_data = #{build_gallery_data(@item).to_json};                
+          var gallery_data = #{build_images_data(@item[:tag]).to_json};                
 
           $("#gallery").galleria({
             width: 826,
@@ -45,11 +45,11 @@
   %body(style="background-image: url(/assets/img/background_02.png)")
     #content(style="margin-left: auto; margin-right: auto; width: 850px; height: 700px; background-color: transparent;")
       .nolink(style="float: left; padding-top: 35px;")
-        %h2= @item[:gallery_title]
+        %h2= @item[:title]
         .nolink(style="margin-top: 55px; font-size: 12pt;")
-          %a(href="#{galleries_url}/##{marker_name(@item)}")
+          %a(href="#{galleries_url}")
             < Galleries
-            
+          
       #title.nolink(style="float: right; width: 250px; padding-top: 15px; z-index: 99;")
         #title-text.nolink(style="float: right; _position: absolute; top: 0; right: 0; width: 250px; border-bottom: 2px solid silver; font-size: 24pt; text-align: right;")
           %a.nolink(href="/") verticonaut

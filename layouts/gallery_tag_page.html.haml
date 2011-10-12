@@ -27,7 +27,7 @@
         #content.padder
 
           #galleries(style="width: 100%")
-            %h2= "Galleries tagged with '#{@item[:tag]}'"
+            %h2= "Galleries tagged '#{@item[:tag]}'"
             - gallery_items_with_tag(@item[:tag]).each do |item|
               != render "_gallery", :gallery => item
 

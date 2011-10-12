@@ -7,7 +7,7 @@
       %br
       = Constants::MONTH[@gallery[:month]]
 
-  .gallery-summary
+  .gallery-summary(style="position: relative;")
     .splash
       %a(href="#{gallery_url(@gallery)}" target="#{gallery_target(@gallery)}")
         %img(src="#{File.dirname(@gallery.identifier)}/_splash.jpg" style="width: 100px; height: 100px;")
@@ -16,6 +16,11 @@
       %a(href="#{gallery_url(@gallery)}" target="#{gallery_target(@gallery)}")
         = @gallery[:gallery_title]
 
-    %p
+    %p(style="padding-bottom: 20px")
       = @gallery[:text]
+    
+    .tags-list(style="position: absolute; left: 10px; bottom: 5px; font-size: 10pt; color: grey")
+      Tags: 
+      = @gallery.raw_filename
+      = tags_for(@gallery, :base_url => '/photography/galleries/tagged/')
   

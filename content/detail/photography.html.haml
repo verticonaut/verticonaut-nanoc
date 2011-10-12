@@ -9,16 +9,16 @@ stylesheet: galleries
   .tag-cloud
     %h4 Galleries by tag
     %ul.tagcloud
-      - gallery_tag_cloud(:galleries).each do |tag|
+      - gallery_tag_cloud.each do |tag|
         %li{:style => "font-size: #{tag.size}pt"}
-          %a{:href => "/photography/tags/#{tag.name}/"} #{tag.name}
+          %a{:href => "/photography/galleries/tagged/#{tag.name}/"} #{tag.name}
 
   .tag-cloud
     %h4 Images by tag
     %ul.tagcloud
-      - gallery_tag_cloud(:galleries).each do |tag|
+      - image_tag_cloud.each do |tag|
         %li{:style => "font-size: #{tag.size}pt"}
-          %a{:href => "/photography/tags/#{tag.name}/"} #{tag.name}
+          %a{:href => "/photography/images/tagged/#{tag.name}/"} #{tag.name}
 
 #galleries
   .section(style="margin-top: 15px")
