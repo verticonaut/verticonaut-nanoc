@@ -27,31 +27,14 @@
         #content.padder
 
           #galleries(style="width: 100%")
-            %h2= "Galleries tagged '#{@item[:tag]}'"
+            %h2.nolink
+              %a(href="#{galleries_url}")= "Galleries"
+              = " - tagged '#{@item[:tag]}'"
+
             - gallery_items_with_tag(@item[:tag]).each do |item|
               != render "_gallery", :gallery => item
 
         #layout_footer
 
-      #footer
-        #menubar.nolink
-          %a(href="/detail/climbing")
-            .menu-item-color-1.item.first(style="width: 195px;")
-              %p Climbing
-          %a(href="/detail/photography")
-            .menu-item-color-2.item
-              %p Photography
-          %a(href="/detail/projects")
-            .menu-item-color-3.item
-              %p Projects
-          %a(href="/detail/thoughts")
-            .menu-item-color-4.item
-              %p Thoughts
-          %a(href="/detail/about")
-            .menu-item-color-5.item(style="width: 196px;")
-              %p About
-          .clear-float
+      != render "_footer_menu_small"
 
-        #footer-content
-          Design by Martin Schweizer - 2011 - Built with
-          %a(href="http://nanoc.stoneship.org/" target="_blank") Nanoc
