@@ -7,7 +7,7 @@ stylesheet: galleries
 
 #tag-clouds.nolink
   .tag-cloud
-    %h4 Galleries by tag
+    %h4 Galleries by category
     %ul.tagcloud
       - gallery_tag_cloud.each do |tag|
         %li{:style => "font-size: #{tag.size}pt"}

@@ -1,7 +1,9 @@
-  require 'json'
-  require 'xmp'
-  require 'exifr'
-  require 'open-uri'
+# encoding: utf-8
+
+require 'json'
+require 'xmp'
+require 'exifr'
+require 'open-uri'
 
 
 def fetch_galleries
@@ -16,7 +18,7 @@ end
 def build_gallery_data(item)
   data = []
   path = item.path
-  Dir.glob("content#{path}image_*.jpg") do |file|
+  Dir.glob("content#{path}image-*.jpg") do |file|
     build_single_image_data(data, file, path)
   end
 
@@ -37,32 +39,67 @@ end
 
 def build_single_image_data(data, file, path)
   filename = File.basename(file)
-  file_nr = /.*\D+_?(\d+)\.jpg/i.match(filename) ? $1 : nil
+  file_nr = /.*\D+-(\d+)\.jpg/i.match(filename) ? $1 : nil
   puts "invalid filename: #{filename}" unless file_nr
 
   # read image meta data
   img = EXIFR::JPEG.new(file)
   xmp = XMP.parse(img)
 
-  subject     = xmp.dc.subject.join(', ') #=> ["something interesting"]
-  title       = xmp.dc.title.join(', ') #=> ["something interesting"]
-  description = xmp.dc.description.join(', ') #=> ["something interesting"]
+  headline    = ""
+  desription  = ""
+  tags        = ""
+  city        = ""
+  country     = ""
+  location    = ""
+
   begin
-    city        = xmp.photoshop.City.content
-    country     = xmp.photoshop.Country.content
-    location    = (country && !country.strip.empty? && city && !city.strip.empty?) ? " (#{city}/#{country})" : ""
+    # tags (Inhalt: Schlagwoerter)
+    tags = xmp.dc.subject.join(', ')
   rescue
-    location = ""
+    puts :tags => tags
+  end
+      
+  begin
+    # Inhalt: Überschrift
+    headline = xmp.photoshop.Headline.content
+  rescue => e
+    # has no content
+  end
+
+  begin
+    # Inhalt: Untertitel
+    description = xmp.dc.description.join(', ')
+  rescue => e
+    # has no content
+  end
+      
+  begin
+    city = xmp.photoshop.City.content
+  rescue => e
+    # has no content
+  end
+      
+  begin
+    country = xmp.photoshop.Country.content
+  rescue => e
+    # has no content
+  end
+      
+  begin
+    location = (country && !country.strip.empty? && city && !city.strip.empty?) ? " (#{city}/#{country})" : ""
+  rescue => e
+    # has no content
   end
       
   data << {
-    :thumb       => "#{path}/thumb_#{file_nr}.jpg",
-    :image       => "#{path}/image_#{file_nr}.jpg",
-    :big         => "#{path}/big_#{file_nr}.jpg",
-    :title       => title,
-    :description => "description#{location}",
-    :_link        => 'http://my.destination.com',
-    :_layer      => '<div><h2>This image is gr8</h2><p>And this text will be on top of the image</p>'
+    :thumb       => "#{path}/thumb-#{file_nr}.jpg",
+    :image       => "#{path}/image-#{file_nr}.jpg",
+    :big         => "#{path}/big-#{file_nr}.jpg",
+    :title       => headline,
+    :description => location,
+    :layer       => description.nil? || description.empty? ? "" : "<div>#{description}</div>",
+    :_link        => 'http://my.destination.com'
   } if file_nr
 end
 

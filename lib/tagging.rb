@@ -9,6 +9,27 @@ MONTHS = {
   7 => "July", 8 => "August", 9 => "September",
   10 => "October", 11 => "November", 12 => "December"
 }
+
+TagWhiteList = [
+  "b&w",
+  "analog",
+  "animal",
+  "climbing",
+  "closeup",
+  "culture",
+  "detail",
+  "experimental",
+  "hiking",
+  "landscape",
+  "lifestyle",
+  "nature",
+  "panorama",
+  "portrait",
+  "sports",
+  "still life",
+  "travel",
+]
+
   
 def tag_set(key)
   @site[:tags] ||= {}
@@ -57,7 +78,7 @@ end
 
 def image_items_with_tag(tag)
   collect_image_items.
-    select {|i| (i[:tags] || []).include?(tag)}.
+    select {|i| (i[:tags] || []).any?{|image_tag| image_tag.downcase == tag} }.
     sort_by {|i| -1 * (i[:year] ? (i[:year]*100 + i[:month]) : -1)}
 end
 
@@ -76,12 +97,15 @@ def collect_image_tags
   items = collect_image_items
 
   @site[:tag_image_cache] = {}
+  all_tags = Set.new
   collect_item_tags(:gallery_images, items) do |item|
     img = EXIFR::JPEG.new(item.raw_filename)
     xmp = XMP.parse(img)
 
     begin
-      tags = xmp.dc.subject || []
+      tags = (xmp.dc.subject || []).map(&:downcase)
+      all_tags = all_tags | tags
+      tags.select! {|ele| TagWhiteList.include? ele }
     rescue => e
       puts "*" * 100
       # puts e.stacktrace
@@ -92,11 +116,15 @@ def collect_image_tags
       (@site[:tag_image_cache][tag] ||= []) << item
     end
   end
+
+  # log all tags - so we can extend the white list in case new reasonalbe ones come up
+  puts "*" * 50
+  puts :all_tags => all_tags.to_a.join(',')
 end
 
 def collect_image_items
   collect_items do |item|
-    item.identifier =~ /photography\/galleries\/[^\/]+\/image_\d*/
+    item.identifier =~ /photography\/galleries\/[^\/]+\/image-\d*/
   end
 end
 
