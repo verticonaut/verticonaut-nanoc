@@ -1,0 +1,14 @@
+%a(name="#{marker_name(@gallery)}" id="#{marker_name(@gallery)}")
+
+.gallery-item.featured_gallery
+
+  .gallery-summary(style="position: relative;")
+    .splash
+      %a(href="#{gallery_url(@gallery)}" target="#{gallery_target(@gallery)}")
+        %img(src="#{File.dirname(@gallery.identifier)}/_splash.jpg" style="width: 100px; height: 100px;")
+
+    %h4
+      %a(href="#{gallery_url(@gallery)}" target="#{gallery_target(@gallery)}" title="#{@gallery[:text]}")
+        = @gallery[:gallery_title]
+    
+  

@@ -1,11 +1,10 @@
 %a(name="#{marker_name(@gallery)}" id="#{marker_name(@gallery)}")
 
 .gallery-item
-  - if @gallery[:year]
-    .time-box
-      = @gallery[:year]
-      %br
-      = Constants::MONTH[@gallery[:month]]
+  .time-box
+    = @gallery[:year]
+    %br
+    = Constants::MONTH[@gallery[:month]]
 
   .gallery-summary(style="position: relative;")
     .splash

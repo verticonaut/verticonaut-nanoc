@@ -25,7 +25,8 @@ stylesheet: galleries
     Featured
 
   - @site[:featured_galleries].each do |item|
-    != render "_gallery", :gallery => item
+    != render "_featured_gallery", :gallery => item
+  .clear-float
 
   .section
     Galleries
