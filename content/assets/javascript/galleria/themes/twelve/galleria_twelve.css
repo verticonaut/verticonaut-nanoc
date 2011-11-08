@@ -245,3 +245,11 @@
 .galleria-carousel .galleria-thumb-nav-right { display: block }
 .galleria-lightbox-content { background: url(loader_pos.gif) no-repeat 50% 50% }
 
+.galleria-layer div {
+top: 10px;
+left: 10px;
+padding: 10px;
+position: absolute;
+background: url(bg_layer.png);
+color: white;
+}

@@ -98,7 +98,7 @@ def build_single_image_data(data, file, path)
     :big         => "#{path}/big-#{file_nr}.jpg",
     :title       => headline,
     :description => location,
-    :layer       => description.nil? || description.empty? ? "" : "<div>#{description}</div>",
+    :layer       => description.nil? || description.empty? ? "" : "<div class='description'>#{description}</div>",
     :_link        => 'http://my.destination.com'
   } if file_nr
 end

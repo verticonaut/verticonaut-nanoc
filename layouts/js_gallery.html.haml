@@ -24,7 +24,7 @@
           $("#gallery").galleria({
             width: 826,
             height: 500,
-            imageCrop: true,
+            imageCrop: false,
             dataSource:  gallery_data
           });
         });
@@ -58,5 +58,7 @@
 
       #preview-body
         #gallery
-        #cr(style="position: absolute; margin-top: 18px; right: 2px; font-size: 9pt;")
-          copyright &copy; Martin Schweizer
+        %div(style="position: absolute; margin-top: 18px; left: 0px; font-size: 9pt;")
+          Copyright &copy; Martin Schweizer
+        %div(style="position: absolute; margin-top: 18px; right: 25px; font-size: 9pt;")
+          Best view experience - click here ^ or ^

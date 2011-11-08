@@ -28,6 +28,12 @@ TagWhiteList = [
   "sports",
   "still life",
   "travel",
+  "hdr",
+  "everyday life",
+  "fun",
+  "iphone",
+  "hipstamatic",
+  "360",
 ]
 
   
