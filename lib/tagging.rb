@@ -11,15 +11,21 @@ MONTHS = {
 }
 
 TagWhiteList = [
-  "b&w",
+  "360",
   "analog",
   "animal",
+  "b&w",
   "climbing",
   "closeup",
   "culture",
   "detail",
+  "everyday life",
   "experimental",
+  "fun",
+  "hdr",
   "hiking",
+  "hipstamatic",
+  "iphone",
   "landscape",
   "lifestyle",
   "nature",
@@ -28,12 +34,7 @@ TagWhiteList = [
   "sports",
   "still life",
   "travel",
-  "hdr",
-  "everyday life",
-  "fun",
-  "iphone",
-  "hipstamatic",
-  "360",
+  "wildlife",
 ]
 
   
@@ -113,7 +114,7 @@ def collect_image_tags
       all_tags = all_tags | tags
       tags.select! {|ele| TagWhiteList.include? ele }
     rescue => e
-      puts "*" * 100
+      puts "err_" * 10
       # puts e.stacktrace
       tags = []
     end
@@ -125,7 +126,8 @@ def collect_image_tags
 
   # log all tags - so we can extend the white list in case new reasonalbe ones come up
   puts "*" * 50
-  puts :all_tags => all_tags.to_a.join(',')
+  puts :all_tags    => all_tags.to_a.join(',')
+  puts :unused_tags => (all_tags - TagWhiteList).to_a.join(',')
 end
 
 def collect_image_items

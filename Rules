@@ -41,6 +41,10 @@ end
 #   # don’t compile galler metas
 # end
 
+compile %r{^/CNAME} do
+  # don’t CNAME
+end
+
 compile %r{^/assets/javascript/.*} do
   # don’t standard css
 end
@@ -77,6 +81,11 @@ compile '*' do
       layout 'default'
     end
   end
+end
+
+
+route %r{CNAME} do
+  item.identifier.chop
 end
 
 route %r{^/assets/javascript/.*} do

@@ -75,78 +75,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "content/assets/javascript/site.js",
-			"settings":
-			{
-				"buffer_size": 259,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/index.html.haml",
-			"settings":
-			{
-				"buffer_size": 958,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/detail/climbing.html.haml",
-			"settings":
-			{
-				"buffer_size": 1902,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/assets/styles/sass/welcome.sass",
-			"settings":
-			{
-				"buffer_size": 2458,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/assets/styles/sass/climbing.sass",
-			"settings":
-			{
-				"buffer_size": 413,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/detail/about.html.haml",
-			"settings":
-			{
-				"buffer_size": 1590,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/custom.rb",
-			"settings":
-			{
-				"buffer_size": 2751,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/tagging.rb",
-			"settings":
-			{
-				"buffer_size": 3678,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/detail/photography.html.haml",
-			"settings":
-			{
-				"buffer_size": 806,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -172,52 +100,59 @@
 	},
 	"file_history":
 	[
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/lib/custom.rb",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/_featured_gallery.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/_gallery.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/_tagged_gallery.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/_default.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/image_tag_page.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/gallery_tag_page.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/_tagged_gallery.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/_footer_menu_small.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/lib/tagging.rb",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/_gallery.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/site_01.jpg",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/2002-12-patagonia/_meta.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/Rules",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/lib/custom.rb",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/js_gallery.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/photography.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/climbing.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/galleries.sass",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/_hdr/_meta.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/_hipstamatic/_meta.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/about.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/_panorama/_meta.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/_favorites/_meta.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/welcome.sass",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/detail/about/index.html",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/about.sass",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/_base.sass",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/photography.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/_hdr/_meta.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/_portrait/_meta.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/js_gallery.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/galleries.sass",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/javascript/galleria/themes/twelve/galleria_twelve.css",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/2010-10-rodellar/_meta.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/2010-04-siurana/_meta.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/index.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/javascript/site.js",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/climbing.sass",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/climbing.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/projects.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/2002-12-patagonia/_meta.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/2009-10-sardegna/_meta.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/2006-04-montsant/_meta.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/2010-04-siurana/_meta.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/_footer_menu_small.html.haml",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/site_01.jpg",
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/Rules",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/detail.sass",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/about.sass",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/assets/styles/detail.css",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/_colors.sass",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/_base.sass",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/_menu_a_colors.sass",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/climbing.sass",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/_default.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/climbing.txt",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/javascript/galleria/galleria-1_2_5.js",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/lib/default.rb",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/gallery_tag_page.html",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/about.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/projects.sass",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/welcome.sass",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/detail_photography.html.haml",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/projects.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/heartbeat.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/javascript/focus_vibrate.js",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/detail/thoughts.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/_special_gallery.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/2011-12-jp/_meta.html.haml",
 		"/Users/martin/Library/Application Support/Sublime Text 2/Packages/Default/Base File.sublime-settings",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/javascript/site.js",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/assets/styles.css",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/assets/styles/default.css",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/assets/styles/sass/index.sass",
@@ -232,7 +167,6 @@
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/2001-12-patagonia/_meta.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/photography/galleries/2002-12-patagonia/index.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/detail/photography/index.html",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/index.html.haml",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/photography/galleries/2010-10-rodellar/_splash.jpg",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/assets/javascript/galleria/themes/twelve/galleria_twelve_.js",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/assets/javascript/galleria/galleria-1_2_5.js",
@@ -282,7 +216,6 @@
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/layouts/default_orig.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/about/climbing.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/about/index.html",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/detail/about/index.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/index.html",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/README",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/about.html.haml",
@@ -294,9 +227,7 @@
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/tmp/checksums",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/stylesheet.css",
 		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/style.css",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/README.txt",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/jquery.jtweetsanywhere-1.2.1.css",
-		"/Users/martin/projects/nanoc/verticonaut-nanoc/content/javascript/jTweetAnywhere/jquery.jtweetsanywhere-1.2.1.js"
+		"/Users/martin/projects/nanoc/verticonaut-nanoc/output/README.txt"
 	],
 	"find":
 	{
@@ -304,14 +235,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 88.0,
-		"include_history":
+		"height": 0.0,
+		"where_history":
 		[
 			""
-		],
-		"location_history":
-		[
-			"<open folders>"
 		]
 	},
 	"find_state":
@@ -319,6 +246,12 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"featured",
+			"feature",
+			"layer",
+			"font",
+			"clear-float",
+			"clear",
 			",",
 			":gallery_photos",
 			"Keyword",
@@ -371,264 +304,15 @@
 		],
 		"reverse": false,
 		"show_context": true,
-		"use_buffer": false,
+		"use_buffer2": true,
 		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 8,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "content/assets/javascript/site.js",
-					"settings":
-					{
-						"buffer_size": 259,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								224,
-								224
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "content/index.html.haml",
-					"settings":
-					{
-						"buffer_size": 958,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "content/detail/climbing.html.haml",
-					"settings":
-					{
-						"buffer_size": 1902,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1897,
-								1897
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 2.0,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 491.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "content/assets/styles/sass/welcome.sass",
-					"settings":
-					{
-						"buffer_size": 2458,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 2.0,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1630.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "content/assets/styles/sass/climbing.sass",
-					"settings":
-					{
-						"buffer_size": 413,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								384,
-								384
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 2.0,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "content/detail/about.html.haml",
-					"settings":
-					{
-						"buffer_size": 1590,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								138,
-								138
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 2.0,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "lib/custom.rb",
-					"settings":
-					{
-						"buffer_size": 2751,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2062,
-								2062
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2.0,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1018.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "lib/tagging.rb",
-					"settings":
-					{
-						"buffer_size": 3678,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								332,
-								332
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2.0,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "content/detail/photography.html.haml",
-					"settings":
-					{
-						"buffer_size": 806,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								140,
-								140
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 2.0,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
