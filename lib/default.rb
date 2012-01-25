@@ -9,11 +9,11 @@ include Nanoc3::Helpers::Tagging
 
 class Nanoc3::Site
   attr_accessor :memory
-  
+
   def [] (key)
     @memory[key]
   end
-  
+
   def []= (key, value)
     @memory[key] = value
   end

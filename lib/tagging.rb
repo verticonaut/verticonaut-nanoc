@@ -37,7 +37,7 @@ TagWhiteList = [
   "wildlife",
 ]
 
-  
+
 def tag_set(key)
   @site[:tags] ||= {}
   @site[:tags][key]
@@ -170,12 +170,12 @@ end
 class CloudTag
   attr_accessor :name
   attr_accessor :count
-  
+
   def initialize(name, count)
     @name = name
     @count = count
   end
-  
+
   def size
     8 + (Math.log(@count).to_i) * 2
   end

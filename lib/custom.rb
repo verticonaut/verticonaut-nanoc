@@ -28,7 +28,7 @@ end
 def build_images_data(tag)
   data = []
   @site[:tag_image_cache][tag].each do |item|
-    file = File.new(item.raw_filename) 
+    file = File.new(item.raw_filename)
     path = File.dirname(item.path)
 
     build_single_image_data(data, file, path)
@@ -59,7 +59,7 @@ def build_single_image_data(data, file, path)
   rescue
     puts :tags => tags
   end
-      
+
   begin
     # Inhalt: Überschrift
     headline = xmp.photoshop.Headline.content
@@ -73,25 +73,25 @@ def build_single_image_data(data, file, path)
   rescue => e
     # has no content
   end
-      
+
   begin
     city = xmp.photoshop.City.content
   rescue => e
     # has no content
   end
-      
+
   begin
     country = xmp.photoshop.Country.content
   rescue => e
     # has no content
   end
-      
+
   begin
     location = (country && !country.strip.empty? && city && !city.strip.empty?) ? " (#{city}/#{country})" : ""
   rescue => e
     # has no content
   end
-      
+
   data << {
     :thumb       => "#{path}/thumb-#{file_nr}.jpg",
     :image       => "#{path}/image-#{file_nr}.jpg",
