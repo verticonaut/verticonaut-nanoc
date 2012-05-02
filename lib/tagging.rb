@@ -2,6 +2,7 @@
 
 require 'set'
 require 'time'
+require 'ap'
 
 MONTHS = {
   1 => "January", 2 => "February", 3 => "March",
@@ -79,13 +80,17 @@ end
 
 def gallery_items_with_tag(tag)
   collect_gallery_items.
-    select {|i| (i[:tags] || []).include?(tag)}.
+    select {|item|
+        (item[:tags] || []).include?(tag)
+    }.
     sort_by {|i| -1 * (i[:year] ? (i[:year]*100 + i[:month]) : -1)}
 end
 
 def image_items_with_tag(tag)
   collect_image_items.
-    select {|i| (i[:tags] || []).any?{|image_tag| image_tag.downcase == tag} }.
+    select {|item|
+      (item[:tags] || []).any?{|image_tag| image_tag.downcase == tag}
+    }.
     sort_by {|i| -1 * (i[:year] ? (i[:year]*100 + i[:month]) : -1)}
 end
 
@@ -123,6 +128,9 @@ def collect_image_tags
       (@site[:tag_image_cache][tag] ||= []) << item
     end
   end
+
+  # make images uniq per tag (assumption size is ok)
+  @site[:tag_image_cache].each_value { |list| list.uniq! { |item| File.size?(item.raw_filename) } }
 
   # log all tags - so we can extend the white list in case new reasonalbe ones come up
   puts "*" * 50

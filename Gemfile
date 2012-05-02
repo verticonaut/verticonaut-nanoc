@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'nanoc'
+gem 'adsf'
+gem 'xmp'
+gem 'exifr'
+gem 'compass'
+gem 'haml'
+gem 'RedCloth'
+gem 'awesome_print'

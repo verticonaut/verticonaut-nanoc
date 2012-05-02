@@ -1,0 +1,36 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    RedCloth (4.2.9)
+    adsf (1.1.1)
+      rack (>= 1.0.0)
+    awesome_print (1.0.2)
+    chunky_png (1.2.5)
+    compass (0.12.1)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    cri (2.2.1)
+    exifr (1.1.2)
+    fssm (0.2.9)
+    haml (3.1.4)
+    nanoc (3.3.6)
+      cri (~> 2.2)
+    nokogiri (1.5.2)
+    rack (1.4.1)
+    sass (3.1.16)
+    xmp (0.2.0)
+      nokogiri (~> 1.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  RedCloth
+  adsf
+  awesome_print
+  compass
+  exifr
+  haml
+  nanoc
+  xmp
